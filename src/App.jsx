@@ -48,7 +48,6 @@ function App() {
     />
            
      </Routes>
-     {/* <HeroSection /> */}
      <Footer />
      </Router>
      

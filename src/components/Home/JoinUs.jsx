@@ -15,15 +15,14 @@ const JoinUs = ({joinus})=>{
         }}
         >
 
-            <div style={{
+            <div className="joinMainContaainer" style={{
                 width:"80%",
-                backgroundColor:"rgba(0,0,0,0.1)",
-                height:"635px",
+               
                 borderRadius:"10px",
                 display:"flex",
                 flexDirection:'column',
                 alignItems:"center",
-                padding:"3rem"
+                // padding:"3rem"
             }}>
             <div style={{
                 
@@ -54,7 +53,9 @@ const JoinUs = ({joinus})=>{
                     </p>
             </div>
 
-            <div style={{
+            <div
+            className="joinusSubContainer"
+             style={{
                 marginTop:"4rem",
                 display:"flex",
                 gap:"2rem"

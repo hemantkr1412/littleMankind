@@ -1,10 +1,11 @@
 // import Logo from '../../assets/IUCILA____logo_horizo__color.png';
 import "./navbar.css";
 import { useNavigate } from "react-router-dom";
+import DonateButton from "../Donate/DonateButton";
 const Navbar = ({handleScroll,heroSection,projects,about,joinus,contact}) =>{
     const navigate = useNavigate()
     const buttonStyle = {
-        background: 'transparent',
+        background: 'white',
         padding: '10px 20px',
         color: 'black',
         cursor: 'pointer',
@@ -12,31 +13,32 @@ const Navbar = ({handleScroll,heroSection,projects,about,joinus,contact}) =>{
         border: 'none',
         position: 'relative',
         zIndex: 1,
-      };
+        borderRadius: '50px', // Added border radius to match the gradient border
+        transition: 'background 0.3s ease' // Smooth transition
+    };
     
-      const gradientBorderStyle = {
-        content: '""',
+    const gradientBorderStyle = {
         position: 'absolute',
-        top: 0,
-        left: 0,
-        right: 0,
-        bottom: 0,
+        top: '-4px',
+        left: '-4px',
+        right: '-4px',
+        bottom: '-4px',
         zIndex: -1,
         borderRadius: '50px',
-        padding: '4px', // Adjust this to match the border width
         background: 'linear-gradient(104.61deg, rgba(0, 0, 0, 0.6) 7.21%, #EFEFEF 26.13%, #8C18E7 56.01%)',
-        WebkitMask: 'linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)',
-        WebkitMaskComposite: 'xor',
-        maskComposite: 'exclude',
-      };
+    };
+    
+
+
     return(
+        <>
         <div
         className="navbar"
          style={{
             
             backgroundColor:"white",
             // borderBottom:"10px solid #AC364F",
-            display:"flex",
+            
             justifyContent:"space-between",
             alignItems:"center",
         }}>
@@ -48,20 +50,25 @@ const Navbar = ({handleScroll,heroSection,projects,about,joinus,contact}) =>{
                 color:"black",
             
             }}>
-                <p className="para-link" onClick={()=>
-                    navigate('/')
-                }>Home </p>
                 <p className="para-link" onClick={()=>{
+                    navigate('/')
+                    handleScroll(heroSection)
+                }}>Home </p>
+                <p className="para-link" onClick={()=>{
+                     navigate('/')
                     handleScroll(projects)
                 }}>Projects</p>
                 <p className="para-link" onClick={()=>{
+                     navigate('/')
                     handleScroll(about)
                 }}>About</p>
                 <p className="para-link" onClick={()=>{
+                     navigate('/')
                     handleScroll(joinus)
                 }}>Join Us</p>  
                 <p className="para-link" onClick={()=>{
-                    handleScroll(contact)
+                     handleScroll(contact)
+                     navigate('/')
                 }}>Contact</p>
 
             </div>
@@ -69,9 +76,40 @@ const Navbar = ({handleScroll,heroSection,projects,about,joinus,contact}) =>{
             <div style={{
                 marginRight:"20px"
             }}>
-                <div style={{ position: 'relative', display: 'inline-block' }} onClick={()=>
-                    navigate('/donate')
-                }>
+                {/* <div style={{ position: 'relative', display: 'inline-block' }} onClick={() => {
+                    window.scrollTo(0, 0); // Scroll to top
+                    navigate('/donate');   // Navigate to the donate page
+                }}>
+                    <button style={buttonStyle}>
+                      <img src="./donateIcon.png" alt="donate" /> DONATE
+                    </button>
+                    <div style={gradientBorderStyle}></div>
+                </div> */}
+                <DonateButton 
+                handleClick = {
+                    ()=>{
+                        window.scrollTo(0, 0); // Scroll to top
+                        navigate('/donate'); 
+                    }
+                }
+                />
+
+            </div>
+        </div>
+
+
+
+        <div className="mobileNavbar">
+            <div style={{
+                 marginLeft:"20px"
+            }}><img src="./menuIcon.svg" alt="Menu" /></div>
+            <div style={{
+                 marginRight:"20px"
+            }}>
+                        <div style={{ position: 'relative', display: 'inline-block' }} onClick={() => {
+                            window.scrollTo(0, 0); // Scroll to top
+                            navigate('/donate');   // Navigate to the donate page
+                        }}>
                     <button style={buttonStyle}>
                       <img src="./donateIcon.png" alt="donate" /> DONATE
                     </button>
@@ -80,6 +118,7 @@ const Navbar = ({handleScroll,heroSection,projects,about,joinus,contact}) =>{
 
             </div>
         </div>
+        </>
     )
 }
 

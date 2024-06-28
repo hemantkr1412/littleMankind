@@ -1,13 +1,23 @@
 /* Navbar.css */
 .navbar {
+    display:flex;
     position: fixed;
     top: 0;
     width: 100%;
     height: 110px;
     background-color: white;
     z-index: 3000;
+
   }
-  
+
+  .mobileNavbar{
+    display: none;
+    width: 100%;
+    height: 100px;
+    /* background-color: white; */
+    justify-content: space-between;
+    align-items: center;
+  }
 
 
 
@@ -18,6 +28,54 @@ font-weight: 500;
 line-height: 24px;
 text-align: left;
 cursor: pointer;
+}
+
+
+/* Styles for 17-inch laptops and larger */
+@media (min-width: 1600px) {
+  /* Your CSS styles for 17-inch laptops and larger */
+  .navbar {
+    height: 110px;
+  }
+
+}
+
+/* Styles for 15-inch to 16.9-inch laptops */
+@media (min-width: 1440px) and (max-width: 1599px) {
+  /* Your CSS styles for 15-inch to 16.9-inch laptops */
+  .navbar {
+    height: 90px;
+  }
+}
+
+/* Styles for 13-inch to 14.9-inch laptops */
+@media (min-width: 1280px) and (max-width: 1439px) {
+  /* Your CSS styles for 13-inch to 14.9-inch laptops */
+  .navbar {
+    height: 80px;
+  }
+}
+
+/* Optional: Styles for screens narrower than 13-inch laptops */
+@media (max-width: 1279px) {
+  /* Your CSS styles for screens narrower than 13-inch laptops */
+  .navbar {
+    height: 80px;
+  }
+}
+
+
+@media (max-width: 800px) {
+  /* Your CSS styles for screens narrower than 13-inch laptops */
+  .navbar {
+    display: none;
+  }
+  .mobileNavbar{
+    top: 0;
+    position: fixed;
+    display: flex;
+    z-index: 3000;
+  }
 }
 
 

@@ -30,10 +30,11 @@ const Partners = ()=>{
                     OUR PARTNERS
                     </p> 
                 </div>
-                <div style={{
+                <div
+                className="ourPartnerSub"
+                 style={{
                     marginTop:"3rem",
                     width:"100%",
-                    height:'300px',
                     // border:"2px solid black",
                     display:"flex",
                     justifyContent:"space-between",

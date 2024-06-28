@@ -15,15 +15,16 @@ const Team = ({about}) =>{
         }}
         >
 
-            <div style={{
+            <div 
+            className="teamContainerSub"
+            style={{
                 width:"80%",
                 background:"linear-gradient(110.59deg, #030016 0%, #130058 100%)",
-                height:"469px",
+                height:"auto",
                 borderRadius:"10px",
                 display:"flex",
                 flexDirection:'column',
                 alignItems:"center",
-                padding:"3rem"
             }}>
                 <h1
                     style={{
@@ -31,7 +32,9 @@ const Team = ({about}) =>{
                     }}
                 >OUR TEAM</h1>
 
-                <div style={{
+                <div 
+                className="ourTeamContainerSub"
+                style={{
                     // width:"100%",
                     marginTop:"3rem",
                     display:'flex',

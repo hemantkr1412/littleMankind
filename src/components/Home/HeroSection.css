@@ -31,6 +31,19 @@
     opacity: 0;
     animation: fadeInText 1s forwards 1s; /* Fade in with delay */
   }
+
+  .whatwedoContainer{
+    width: 880px;
+    height:300px;
+    padding:2rem;
+  }
+
+  .whatwedoContainerSub{
+    width:60%;
+  }
+  .whatwedoContainerSub2{
+    width:40%;
+  }
   
   @keyframes fadeInText {
     from { opacity: 0; }
@@ -66,4 +79,137 @@
     background: #124D0D    !important; /* Change this to the color you want for the active dot */
     border: 3px solid white;
   }
+
+
+
   
+.whatwedoContainer p{
+font-size: 24px;
+font-weight: 400;
+line-height: 36px;
+letter-spacing: 0.06em;
+text-align: left;
+
+}
+
+.ourmissionContainersub1{
+  width: 60%;
+}
+.ourmissionContainersub2{
+  width: 40%;
+  display: flex;
+  justify-content: right;
+}
+
+.impactContainer{
+  height:132px;
+}
+.ourTeamContainerSub{
+
+}
+
+.teamContainerSub{
+  padding: 3rem;
+}
+
+.ourPartnerSub{
+  height:300px;
+}
+.joinusSubContainer{
+
+}
+
+.contactUsEmailBox{
+  width:543px;
+  height:71px;
+}
+
+.contactUsEmailBox p{
+  font-size: 35px;
+  font-weight: 600;
+  line-height: 43.2px;
+  letter-spacing: 0.06em;
+  padding:0.8rem;
+}
+
+.joinMainContaainer{
+  height:635px;
+  background-color:rgba(0,0,0,0.1);
+  padding: 3rem;
+}
+  
+
+@media (max-width: 800px) {
+  /* Your CSS styles for screens narrower than 13-inch laptops */
+  .whatwedoContainer{
+    width: 90%;
+    flex-direction: column;
+    height:600px;
+    padding: 1rem;
+  }
+  .whatwedoContainerSub{
+    width:100%;
+
+  }
+  .whatwedoContainerSub2{
+    width:100%;
+  }
+  .whatwedoContainer p{
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 36px;
+    letter-spacing: 0.06em;
+    text-align: left;
+    
+    }
+    .impactContainer{
+      flex-direction: column;
+      height:800px;
+    }
+    .ourTeamContainerSub{
+      flex-direction: column;
+    }
+    .ourPartnerSub{
+      flex-direction: column;
+      gap: 2rem;
+      height:auto
+    }
+    .joinusSubContainer{
+      flex-direction: column;
+    }
+    .contactUsEmailBox{
+      width:300px;
+      height:71px;
+    }
+    .contactUsEmailBox p{
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 43.2px;
+      letter-spacing: 0.06em;
+      padding:0.8rem;
+    }
+    .joinMainContaainer{
+      height:auto;
+      background-color: transparent;
+      padding: 1rem;
+    }
+}
+
+@media (max-width: 650px) {
+  /* Your CSS styles for screens narrower than 13-inch laptops */
+  .ourmissionContainer{
+    flex-direction: column-reverse;
+  }
+  .ourmissionContainersub1{
+    margin-top: 2rem;
+    width: 100%;
+  }
+  .ourmissionContainersub2{
+    width: 100%;
+    justify-content: center;
+  }
+  .teamContainerSub{
+    padding: 1rem;
+  }
+    
+}

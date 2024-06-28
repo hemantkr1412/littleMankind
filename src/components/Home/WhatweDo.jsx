@@ -84,20 +84,21 @@ const WhatweDo = () => {
            </div>
 
            <div 
+           className="whatwedoContainer"
            style={{
             marginTop:"5rem",
             backgroundColor:"#F5F5F5",
-            width:"880px",
-            height:"300px",
+            // width:"880px",
+            // height:"300px",
             display:"flex",
-            padding:"2rem",
             justifyContent:"space-between"
 
            }}
            >
-            <div style={{
-                width:"60%",
-                height:"100%",
+            <div 
+            className="whatwedoContainerSub"
+            style={{
+                // height:"100%",
                 display:"flex",
                 flexDirection:"column",
                 alignItems:"center",
@@ -117,14 +118,7 @@ const WhatweDo = () => {
                     }}/>
                
                     <div>
-                    <p style={{
-                        fontSize: "24px",
-                        fontWeight: "400",
-                        lineHeight: "36px",
-                        letterSpacing: "0.06em",
-                    
-                        
-                    }}>ANIMAL CONSERVATION</p>
+                    <p >ANIMAL CONSERVATION</p>
                     <p style={{
                         fontSize: "14px",
                         fontWeight: "400",
@@ -153,14 +147,7 @@ const WhatweDo = () => {
                     }}/>
                
                     <div>
-                    <p style={{
-                        fontSize: "24px",
-                        fontWeight: "400",
-                        lineHeight: "36px",
-                        letterSpacing: "0.06em",
-                    
-                        
-                    }}>CHILDREN WELFARRE</p>
+                    <p>CHILDREN WELFARRE</p>
                     <p style={{
                         fontSize: "14px",
                         fontWeight: "400",
@@ -177,8 +164,9 @@ const WhatweDo = () => {
 
 
             </div>
-            <div style={{
-                width:"40%",
+            <div 
+            className="whatwedoContainerSub2"
+            style={{
                 height:"100",
                 display:"flex",
                 flexDirection:"column",
@@ -195,19 +183,12 @@ const WhatweDo = () => {
                 }}
                 >
                     <img src="./Vector3.png" alt="Image" style={{
-                        width:"4Opx",
+                        width:"45px",
                         height:"45px"
                     }}/>
                
                     <div>
-                    <p style={{
-                        fontSize: "24px",
-                        fontWeight: "400",
-                        lineHeight: "36px",
-                        letterSpacing: "0.06em",
-                    
-                        
-                    }}>WOMEN WELFARE</p>
+                    <p>WOMEN WELFARE</p>
                     <p style={{
                         fontSize: "14px",
                         fontWeight: "400",
@@ -236,14 +217,7 @@ const WhatweDo = () => {
                     }}/>
                
                     <div>
-                    <p style={{
-                        fontSize: "24px",
-                        fontWeight: "400",
-                        lineHeight: "36px",
-                        letterSpacing: "0.06em",
-                    
-                        
-                    }}>FORSET</p>
+                    <p >FORSET</p>
                     <p style={{
                         fontSize: "14px",
                         fontWeight: "400",
@@ -285,14 +259,14 @@ const WhatweDo = () => {
              </p> 
         </div>
 
-        <div style={{
+        <div 
+        className="ourmissionContainer"
+        style={{
             marginTop:"3rem",
             width:"80%",
             display:"flex"
         }}>
-            <div style={{
-                width:"60%"
-            }}>
+            <div className="ourmissionContainersub1" >
                 <p style={{
                     fontSize: "18px",
                     fontWeight: "400",
@@ -303,12 +277,8 @@ const WhatweDo = () => {
                     
                 }}>Our Mission is to provide holistic education and livelihood for children in needy, Women empowerment for economically backwards, conserving Animals from their extinction and Tree plantation for environment protection.</p>
             </div>
-            <div style={{
-                width:"40%",
-                display:"flex",
-                justifyContent:'right',
-
-            }}>
+            <div
+            className="ourmissionContainersub2">
                 <img src="./earth.png" alt="eart" />
 
             </div>

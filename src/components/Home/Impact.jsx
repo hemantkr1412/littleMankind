@@ -47,10 +47,11 @@ const Impact = () =>{
                 </div>
             </div>
 
-            <div style={{
+            <div 
+            className="impactContainer"
+            style={{
                 marginTop:"3rem",
                 width:"80%",
-                height:"132px",
                 display:"flex",
                 padding:"2rem",
                 justifyContent:"space-between"
@@ -64,7 +65,7 @@ const Impact = () =>{
                         fontWeight: "600",
                         lineHeight: "30.07px",
                         letterSpacing: "0.06em",
-                        textSlign: "left",
+                        textAlign: "center",
                         color:"rgba(0,0,0,0.7)"
                         
                     }}>
@@ -91,7 +92,7 @@ const Impact = () =>{
                         fontWeight: "600",
                         lineHeight: "30.07px",
                         letterSpacing: "0.06em",
-                        textSlign: "left",
+                        textAlign: "center",
                         color:"rgba(0,0,0,0.7)"
                         
                     }}>
@@ -117,7 +118,7 @@ const Impact = () =>{
                         fontWeight: "600",
                         lineHeight: "30.07px",
                         letterSpacing: "0.06em",
-                        textSlign: "left",
+                        textAlign: "center",
                         color:"rgba(0,0,0,0.7)"
                         
                     }}>
@@ -143,7 +144,7 @@ const Impact = () =>{
                         fontWeight: "600",
                         lineHeight: "30.07px",
                         letterSpacing: "0.06em",
-                        textSlign: "left",
+                        textAlign: "center",
                         color:"rgba(0,0,0,0.7)"
                         
                     }}>

@@ -1,0 +1,58 @@
+.footerMainContainer{
+    height:300px;
+}
+.footerSubContainer{
+    width: 80%;
+}
+.footerImageContainer img{
+    margin-left: 2rem;
+}
+
+.footerImageContainer p{
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 33px;
+    letter-spacing: 0.06em;
+    text-align: center;
+}
+.footerTextContainer p{
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 21.6px;
+    text-align: center
+                         
+}
+
+@media (max-width: 800px) {
+    /* Your CSS styles for screens narrower than 13-inch laptops */
+    .footerMainContainer{
+        height:300px;
+    }
+    .footerSubContainer{
+        width: 95%;
+    }
+    .footerImageContainer img{
+        margin-left: 0rem;
+        width: 88px;
+        height: 43px;
+    }
+    .footerImageContainer p{
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 33px;
+        letter-spacing: 0.06em;
+        text-align: center;
+    }
+    .footerTextContainer p{
+        margin-top: 1rem;
+        font-size: 10px;
+        font-weight: 400;
+        line-height: 14.4px;
+        text-align: center
+                             
+    }
+    .footerContainerSocialIcon img{
+        width: 18px;
+        height: 18px;
+    }
+}

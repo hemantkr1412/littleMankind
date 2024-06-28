@@ -65,6 +65,7 @@ const Donate = ()=>{
                 className="donationForm"
                 style={{
                     width: "40%",
+                    maxWidth:"550px",
                     height: "600px",
                     backgroundColor: "white",
                     borderRadius: "10px",

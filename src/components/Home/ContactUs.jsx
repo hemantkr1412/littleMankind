@@ -84,10 +84,10 @@ const ContactUs = ({contact})=>{
                     textAlign:"center",
                     color:"white"
                 }}> WRITE TO US AND WE SHALL GET BACK TO YOU</p>
-                <div style={{
+                <div 
+                className="contactUsEmailBox"
+                style={{
                     marginTop:"9rem",
-                    width:"543px",
-                    height:"71px",
                     backgroundColor:"rgba(12, 12, 110, 1)",
                     color:"white",
                     boxShadow: "2px 3px 16px 0px rgba(255, 255, 255, 0.4)",
@@ -96,11 +96,6 @@ const ContactUs = ({contact})=>{
                 }}>
                     <p style={{
                         fontFamily: "Syne",
-                        fontSize: "36px",
-                        fontWeight: "600",
-                        lineHeight: "43.2px",
-                        letterSpacing: "0.06em",
-                        padding:"0.8rem"
                     }}>hello@littlemankind.xyz</p>
                 </div>
         </div>
