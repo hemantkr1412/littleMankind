@@ -39,9 +39,9 @@ const Footer = ()=>{
                         justifyContent:"center",
                         marginTop:"2rem"
                     }}>
-                        <img src="./instIcon.png" alt="Instagram" />
-                        <img src="./facebookIcon.png" alt="Instagram" />
-                        <img src="./linkdIcon.png" alt="Instagram" />
+                        <img src="./instIcon.svg" alt="Instagram" />
+                        <img src="./facebookIcon.svg" alt="Instagram" />
+                        <img src="./linkdIcon.svg" alt="Instagram" />
                     </div>
                 </div>
 

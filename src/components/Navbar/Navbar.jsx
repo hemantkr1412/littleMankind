@@ -42,7 +42,7 @@ const Navbar = ({handleScroll,heroSection,projects,about,joinus,contact}) =>{
             justifyContent:"space-between",
             alignItems:"center",
         }}>
-            <img src="/mankind.png" alt="logo" style={{width:"150px", height:"80px",marginLeft:"20px"}}/>
+            <img src="/mankind.svg" alt="logo" style={{width:"150px", height:"80px",marginLeft:"20px"}}/>
 
             <div style={{
                 display:"flex",
