@@ -5,6 +5,7 @@ import './App.css'
 import Home from './components/Home/Home'
 import Footer from './components/Footer/Footer'
 import Donate from "./components/Donate/Donate";
+import AnimalWelfare from "./components/Projects/AnimalWelfareProject";
 
 function App() {
   const heroSection = useRef(null)
@@ -41,11 +42,17 @@ function App() {
                 joinus={joinus}
                 contact={contact}
                 />} />
-    <Route path="/donate"
-    element={
-      <Donate />
-    }
-    />
+      <Route path="/donate"
+      element={
+        <Donate />
+      }
+      />
+
+      <Route path="/animalWelfare"
+      element={
+        <AnimalWelfare />
+      }
+      />
            
      </Routes>
      <Footer />

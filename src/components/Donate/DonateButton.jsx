@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 const buttonStyle = {
-    background: '#9747FF0D',
+    background: '#9747FF4D',
     padding: '10px 20px',
     color: '#3B0088',
     cursor: 'pointer',

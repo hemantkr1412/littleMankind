@@ -3,8 +3,10 @@ import "./donate.css"
 const Donate = ()=>{
     return(
         <>
-        <div style={{
-            marginTop:"3rem",
+        <div 
+
+        className="donateMainContainer"
+        style={{
             position: "relative",
             width: "100%",
             height: "100vh",
@@ -32,7 +34,7 @@ const Donate = ()=>{
         </div>
         <div style={{
             width:"100%",
-            height:"200px",
+            height:"150px",
             backgroundColor:"rgba(249, 224, 255, 1)",
             display:"flex",
             justifyContent:"center",
@@ -51,27 +53,26 @@ const Donate = ()=>{
                 DONATE
             </h3>
         </div>
-        <div style={{
+        <div 
+        className="donateSubContainer"
+        
+        style={{
             background: "linear-gradient(110.59deg, #030016 0%, #130058 100%)",
-            height:"100vh",
+            height:"auto",
             // width:"100%",
             display:"flex",
-            alignItems:"center",
-            padding:"3rem",
+            // alignItems:"center",
+            // padding:"3rem",
             justifyContent:"space-between",
             gap:"3rem"
         }}>
             <div 
                 className="donationForm"
                 style={{
-                    width: "40%",
-                    maxWidth:"550px",
-                    height: "600px",
                     backgroundColor: "white",
                     borderRadius: "10px",
                     display: "flex",
                     flexDirection: "column",
-                    padding: "2rem",
                     gap: "1rem" // Adding gap between the elements for better spacing
                 }}>
                 <label>Name*</label>
@@ -96,17 +97,15 @@ const Donate = ()=>{
                 </button>
                 </div>
 
-            <div style={{
-                width:"50%",
-                height:"600px",
+            <div 
+            className="accountDetailsContainer"
+            style={{
                 display:"flex",
                 flexDirection:"column",
             
             }}>
 
-                <p 
-                    className='gradient-text'
-                    
+                <p className='gradient-text'
                     style={{
                       
                         fontFamily: 'Syne, sans-serif' ,

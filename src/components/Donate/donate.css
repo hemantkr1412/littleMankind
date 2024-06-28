@@ -1,5 +1,12 @@
+.donateMainContainer{
+    margin-top: 3rem;
+}
 .donationForm{
+    width:40%;
+    max-width:550px;
+    height: 600px;
     gap: 0.7rem;
+    padding: 2rem;
 }
 .donationForm input{
     height: 40px;
@@ -25,6 +32,9 @@ color: white;
 
 }
 
+
+
+
 .donationForm button {
     margin-top: 1rem;
     background: linear-gradient(96.02deg, #0F004F 0.29%, #22009A 100.29%);
@@ -39,4 +49,48 @@ color: white;
     letter-spacing: 0.04em;
     align-self: center; /* Center the button horizontally */
     cursor: pointer; /* Change cursor to pointer on hover */
+  }
+
+  .donateSubContainer{
+    padding: 3rem;
+    align-items: center;
+  }
+
+  .accountDetailsContainer{
+    height:600px;
+    width: 50%;
+  }
+
+  @media (max-width: 800px) {
+    .donateMainContainer{
+        margin-top: 0rem;
+    }
+    .donateSubContainer{
+    flex-direction: column;
+    padding: 0rem;
+    /* align-items: left; */
+
+    }
+    .donationForm{
+        width:90%;
+        /* max-width:800px; */
+        height: 600px;
+        gap: 0.7rem;
+        padding: 0.7rem;
+    }
+    .accountDetailsContainer{
+        height:auto;
+        width: 90%;
+        padding: 0.7rem;
+        
+      }
+      .accoutnDetails{
+        margin-top: 3rem;
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 37.4px;
+        letter-spacing: 0.06em;
+        color: white;
+        
+        }
   }
