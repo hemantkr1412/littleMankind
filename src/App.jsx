@@ -6,6 +6,9 @@ import Home from './components/Home/Home'
 import Footer from './components/Footer/Footer'
 import Donate from "./components/Donate/Donate";
 import AnimalWelfare from "./components/Projects/AnimalWelfareProject";
+import ChildrenWelfare from "./components/Projects/ChildrenWlfare";
+import WomenWelfare from "./components/Projects/WomenWelafre";
+import Forest from "./components/Projects/Forest";
 
 function App() {
   const heroSection = useRef(null)
@@ -53,6 +56,20 @@ function App() {
         <AnimalWelfare />
       }
       />
+      <Route path="/childrenWelfare"
+      element={
+        <ChildrenWelfare />
+      }
+      />
+      <Route path="/womenWelfare"
+      element={
+        <WomenWelfare />
+      }
+      />
+        <Route path="/forest"
+      element={
+        <Forest />
+      }/>
            
      </Routes>
      <Footer />

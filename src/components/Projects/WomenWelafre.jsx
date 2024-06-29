@@ -1,6 +1,7 @@
+import { ImageCard } from "./AnimalWelfareProject";
 
-// import "./donate.css"
-const AnimalWelfare = ()=>{
+import "./project.css"
+const WomenWelfare = ()=>{
     return(
         <>
         <div 
@@ -10,7 +11,7 @@ const AnimalWelfare = ()=>{
             // position: "relative",
             width: "100%",
             height: "100vh",
-            backgroundImage: "url(./animalBg.png)",
+            backgroundImage: "url(./womenImageBg.png)",
             backgroundSize: "cover",
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",
@@ -29,7 +30,9 @@ const AnimalWelfare = ()=>{
               color: "white",
               textAlign: "center",
             }}>
-              Defending Wildlife, Securing Their Tomorrow
+                WOMEN FIRST,
+                <br />
+                A BETTER TOMORROW
             </h1>
         </div>
         <div style={{
@@ -50,7 +53,7 @@ const AnimalWelfare = ()=>{
                 color:"black"
                 
             }}>
-                OUR ANIMAL CONSERVATION PROJECTS
+                OUR WOMEN WELFARE PROJECTS
             </h3>
         </div>
         <div 
@@ -66,18 +69,52 @@ const AnimalWelfare = ()=>{
             justifyContent:"space-between",
             gap:"3rem"
         }}>
-            <div>
-                
+             <div 
+        
+        style={{
+            background: "linear-gradient(110.59deg, #030016 0%, #130058 100%)",
+            minHeight:"800px",
+            width:"100%",
+            display:"flex",
+            alignItems:"center",
+            // padding:"3rem",
+            justifyContent:"center",
+            // gap:"3rem"
+        }}>
+            <div style={{
+                width:"90%"
+            }}>
+                <div className="welfareImageMainBox">
+                    <ImageCard 
+                    url={'./animalImage1.png'}
+                    // text={"11 February 2023, TNPESU, Chennai. 2000 saplings. By : LTIMindtree"}
+                    />
+                    <ImageCard 
+                    url={'./animalImage2.png'}
+
+                    />
+                    <ImageCard 
+                    url={'./animalImage3.png'}
+                    />
+                    <ImageCard 
+                    url={'./animalImage2.png'}
+                    />
+                    <ImageCard 
+                    url={'./animalImage5.png'}
+                    />
+                    <ImageCard
+                    url={'./animalImage6.png'}
+                    />
+                    
+
+                </div>
             </div>
 
-            
-            <div>
-
-            </div>
+        </div>
 
         </div>
         </>
     )
 }
 
-export default AnimalWelfare;
+export default WomenWelfare;

@@ -1,6 +1,7 @@
+import { ImageCard } from "./AnimalWelfareProject";
 
 import "./project.css"
-const AnimalWelfare = ()=>{
+const ChildrenWelfare = ()=>{
     return(
         <>
         <div 
@@ -10,7 +11,7 @@ const AnimalWelfare = ()=>{
             // position: "relative",
             width: "100%",
             height: "100vh",
-            backgroundImage: "url(./animalBg.png)",
+            backgroundImage: "url(./childrenImageBg.png)",
             backgroundSize: "cover",
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",
@@ -29,7 +30,8 @@ const AnimalWelfare = ()=>{
               color: "white",
               textAlign: "center",
             }}>
-              DEFENDING WILDLIFE, SECURING THEIR TOMORROW
+              CARING FOR KIDS,
+              BUILDING BRIGHT TOMORROWS
             </h1>
         </div>
         <div style={{
@@ -50,10 +52,23 @@ const AnimalWelfare = ()=>{
                 color:"black"
                 
             }}>
-                OUR ANIMAL CONSERVATION PROJECTS
+                OUR CHILDREN WELFARE PROJECTS
             </h3>
         </div>
         <div 
+        // className="donateSubContainer"
+        
+        style={{
+            background: "linear-gradient(110.59deg, #030016 0%, #130058 100%)",
+            height:"100vh",
+            width:"100%",
+            display:"flex",
+            // alignItems:"center",
+            // padding:"3rem",
+            justifyContent:"space-between",
+            gap:"3rem"
+        }}>
+             <div 
         
         style={{
             background: "linear-gradient(110.59deg, #030016 0%, #130058 100%)",
@@ -86,7 +101,7 @@ const AnimalWelfare = ()=>{
                     <ImageCard 
                     url={'./animalImage5.png'}
                     />
-                    <ImageCard 
+                    <ImageCard
                     url={'./animalImage6.png'}
                     />
                     
@@ -95,41 +110,10 @@ const AnimalWelfare = ()=>{
             </div>
 
         </div>
+
+        </div>
         </>
     )
 }
 
-export default AnimalWelfare;
-
-
-
-
-const ImageCard = ({url,text}) =>{
-    return(
-        <div
-        style={{
-            backgroundImage:`url(${url})`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            backgroundRepeat: "no-repeat",
-        }}
-         className="welfareImageBox">
-
-            <div style={{
-                width:"220px",
-                height:"60px",
-                background: "rgba(255, 255, 255, 0.7)",
-                borderRadius:"10px"
-
-            }}>
-               <p style={{
-                textAlign:"center",
-                fontSize:"13px"
-               }}>11 February 2023, TNPESU, Chennai.<br /> 2000 saplings. By : LTIMindtree</p>
-            </div>
-
-        </div>
-    )
-}
-
-export {ImageCard};
+export default ChildrenWelfare;

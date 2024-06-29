@@ -30,6 +30,57 @@ text-align: left;
 cursor: pointer;
 }
 
+.para-link2{
+  font-size: 16px;
+font-weight: 500;
+line-height: 24px;
+text-align: left;
+cursor: pointer;
+}
+
+.dropdown1 {
+  position: relative;
+  display: inline-block;
+}
+.dropbtn1{
+    background-color: transparent;
+    color: black;
+    /* padding: 16px; */
+    /* font-size: 16px; */
+    border: none;
+    cursor: pointer;
+    
+}
+.dropdown-content1 {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  text-align: left;
+  height: auto;
+  animation: growDown 300ms ease-in-out forwards;
+  transform-origin: top center;
+}
+
+/* Links inside the dropdown */
+.dropdown-content1 a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content1 a:hover {background-color: #ddd;}
+
+/* Show the dropdown menu on hover */
+.dropdown1:hover .dropdown-content1 {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown1:hover .para-link2 {background-color: transparent; color: black;}
+
 
 /* Styles for 17-inch laptops and larger */
 @media (min-width: 1600px) {
@@ -79,3 +130,145 @@ cursor: pointer;
 }
 
 
+.Rline {
+  display: flex;
+  width: 100%;
+  background-color: #712f3c;
+  border: 10px solid #712f3c;
+  position: static;
+  top: 4rem;
+}
+
+
+.navbar {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 0.5rem 0;
+  position: sticky;
+  background-color: #fff;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.navbar.sticky{
+  position: sticky;
+}
+
+.navbar.relative{
+  position: relative;
+}
+
+.menu {
+  display: none;
+}
+
+.nav-logo {
+  display: flex;
+}
+
+.nav-links {
+  color: #000;
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  font-size: 16px;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.nav-links p {
+  color: #000;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.nav-links p:focus {
+  font-weight: 700;
+}
+
+
+@media only screen and (max-width: 935px) {
+  .navbar {
+    display: none;
+  }
+  .menu {
+    display: block;
+    z-index: 2000;
+  }
+
+  .menuLogo {
+    display: flex;
+    width: 100%;
+    background-color: white;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 0;
+    z-index: 2000;
+  }
+
+  .leftArrow {
+    width: fit-content;
+    margin-left: 2rem;
+  }
+
+  .Mlogo {
+    width: fit-content;
+    margin-right: 2rem;
+  }
+
+  .menuIcon {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    position: fixed;
+    top: 40px;
+    right: 40px;
+    z-index: 1;
+  }
+
+  /* Side Menu */
+  .side-menu {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: white;
+    color: #000;
+    transition: left 0.3s;
+    z-index: 1;
+  }
+
+  .menuList {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    
+  }
+
+  .menuList p {
+    font-size: 20px;
+    font-weight: 400;
+    margin-left: 1rem;
+    color: #000;
+    /* height: 40px; */
+    text-align: left;
+    padding: 0.6rem;
+  }
+
+  .mRedLine {
+    width: 100%;
+    border: 1px solid rgba(164, 164, 164, 1);
+  }
+
+  .side-menu.open {
+    left: 0;
+  }
+
+  body.no-scroll {
+    overflow: hidden !important;
+  }
+}
