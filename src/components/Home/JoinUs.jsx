@@ -115,7 +115,7 @@ const JoinUs = ({handleScroll,joinus,contact})=>{
                         <img src={"./InstImage.png"}  />
                         <div className="box-text">
                         <h4>INSTITUTIONS</h4>
-                        <p>Empowering leaders of tomorrow to be nature lovers.</p>
+                        <p>Empowering leaders of tomorrow to be mankind lovers.</p>
                         </div>
                         
                     </div>

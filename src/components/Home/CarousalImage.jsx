@@ -5,6 +5,28 @@ import "slick-carousel/slick/slick-theme.css";
 import { useState, useEffect, useRef } from "react";
 import { carousalDataImage } from "./carousalImageData";
 
+import styled from 'styled-components';
+
+const IconContainer = styled.div`
+  width: 48px;
+  height: 48px;
+  display: inline-block;
+
+  svg {
+    width: 100%;
+    height: 100%;
+    transition: fill 0.3s, background 0.3s;
+  }
+
+  &:hover svg rect {
+    fill: url(#hoverGradient);
+  }
+
+  &:hover svg path {
+    fill: url(#hoverGradient);
+  }
+`;
+
 const CarousalImage = () =>{
     const [slidesToShow, setSlidesToShow] = useState(2);
     const [slidesToScroll, setSlidesToScroll] = useState(1);
@@ -66,9 +88,19 @@ const CarousalImage = () =>{
     return (
       <div className="slider-containerImage">
         <button className="prevImage" onClick={handlePrev}>
-        <img src='./arrowicon.png' alt="arrowIcon" style={{
-          transform:"rotate(180deg)"
-        }}/>
+          <div className="arrowIconBox" style={{
+            width:"50px",
+            height:"50px",
+            padding:"0.3rem",
+            borderRadius:"50%",
+            display:"flex",
+            justifyContent:"center",
+            alignItems:"center"
+          }}>
+            <img src='./arrow.svg' alt="arrowIcon" style={{
+              transform:"rotate(180deg)"
+            }}/>
+        </div>
         </button>
         <div className="slider-boxImage">
           <Slider ref={sliderRef} {...settings} className="sliderImage">
@@ -82,7 +114,17 @@ const CarousalImage = () =>{
           </Slider>
         </div>
         <button className="nextImage" onClick={handleNext}>
-         <img src='./arrowicon.png' alt="arrowIcon" />
+        <div className="arrowIconBox" style={{
+            width:"50px",
+            height:"50px",
+            padding:"0.3rem",
+            borderRadius:"50%",
+            display:"flex",
+            justifyContent:"center",
+            alignItems:"center"
+          }}>
+            <img src='./arrow.svg' alt="arrowIcon" />
+        </div>
         </button>
       </div>
     );

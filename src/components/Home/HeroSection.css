@@ -81,8 +81,16 @@
   }
 
 
-
+.arrowIconBox{
+  background-color: rgba(150, 150, 150, 1);
+}
   
+.arrowIconBox:hover{
+  background: linear-gradient(270deg, #E06C00 0%, #8C18E7 100%);
+  cursor: pointer;
+}
+
+
 .whatwedoContainer p{
 font-size: 24px;
 font-weight: 400;
@@ -137,6 +145,8 @@ text-align: left;
   background-color:rgba(0,0,0,0.1);
   padding: 3rem;
 }
+
+
   
 
 @media (max-width: 800px) {

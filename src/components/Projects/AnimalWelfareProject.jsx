@@ -10,7 +10,7 @@ const AnimalWelfare = ()=>{
         { id: 1, src: './11.jpg', alt: 'Image 1', text: ' DEFENDING WILDLIFE, SECURING THEIR TOMORROW' },
         { id: 2, src: './44.jpg', alt: 'Image 2', text: ' DEFENDING WILDLIFE, SECURING THEIR TOMORROW' },
         { id: 3, src: './55.jpg', alt: 'Image 3', text: ' DEFENDING WILDLIFE, SECURING THEIR TOMORROW' },
-        { id: 3, src: './33.jpg', alt: 'Image 3', text: ' DEFENDING WILDLIFE, SECURING THEIR TOMORROW' },
+        { id: 3, src: './34.png', alt: 'Image 3', text: ' DEFENDING WILDLIFE, SECURING THEIR TOMORROW' },
         // Add more images as needed
       ];
     

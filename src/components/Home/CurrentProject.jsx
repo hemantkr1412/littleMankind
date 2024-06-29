@@ -1,6 +1,8 @@
 import '@fontsource/syne/700.css';
 import "./CurrentProject.css"
 import Carousal from './CarousalBox';
+
+
 const CurrentProject = ({projects}) =>{
     return(
         <div

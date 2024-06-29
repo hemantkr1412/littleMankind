@@ -59,7 +59,9 @@ const Navbar = ({handleScroll,heroSection,projects,about,joinus,contact}) =>{
             justifyContent:"space-between",
             alignItems:"center",
         }}>
-            <img src="/mankind.svg" alt="logo" style={{width:"150px", height:"80px",marginLeft:"20px"}}/>
+            <img src="/mankind.svg" alt="logo" onClick={()=>{
+                navigate('/')
+            }} style={{width:"150px", height:"80px",marginLeft:"20px",cursor:"pointer"}}/>
 
             <div style={{
                 display:"flex",
@@ -72,10 +74,7 @@ const Navbar = ({handleScroll,heroSection,projects,about,joinus,contact}) =>{
                     handleScroll(heroSection)
                 }}>Home </p>
                 <div className="dropdown1">
-                    <p className="para-link2" onClick={()=>{
-                        navigate('/')
-                        handleScroll(projects)
-                        }}>Projects</p>
+                    <p className="para-link2">Projects</p>
                          <div className="dropdown-content1">
                             <div className="column" style={{
                             width:"100%",
