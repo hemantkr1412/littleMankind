@@ -9,7 +9,7 @@ import JoinUs from "./JoinUs";
 import ContactUs from "./ContactUs";
 import { useEffect, useState } from "react";
 
-const Home = ({heroSection,handleScroll,projects,about,joinus,contact}) =>{
+const Home = ({heroSection,handleScroll,projects,about,joinus,contact,mission,partners}) =>{
     const imagesBG = [
         { id: 1, src: './bgImage1.png', alt: 'Image 1', text: 'Welcome to Little Mankind' },
         { id: 2, src: './bgImage2.jpg', alt: 'Image 2', text: 'Supporting Women, Strengthening Society' },
@@ -52,7 +52,7 @@ const Home = ({heroSection,handleScroll,projects,about,joinus,contact}) =>{
         <HeroSection heroSection={heroSection} 
         images={images}
         />
-        <WhatweDo />
+        <WhatweDo mission={mission}/>
         <CurrentProject 
         projects={projects}
         />
@@ -61,7 +61,10 @@ const Home = ({heroSection,handleScroll,projects,about,joinus,contact}) =>{
         <Team 
         about={about}
         />
-        <Partners />
+        <Partners 
+        partners={partners}
+
+        />
         <JoinUs 
         handleScroll={handleScroll}
         joinus={joinus}

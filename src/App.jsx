@@ -16,6 +16,8 @@ function App() {
   const about = useRef(null);
   const joinus = useRef(null);
   const contact = useRef(null);
+  const mission = useRef(null);
+  const partners = useRef(null)
  
 
    const handleScroll = (ref) => {
@@ -36,6 +38,8 @@ function App() {
            about={about}
            joinus={joinus}
            contact={contact}
+           mission={mission}
+           partners={partners}
      />
      <Routes>
      <Route path="/" element={ <Home 
@@ -45,6 +49,8 @@ function App() {
                 about={about}
                 joinus={joinus}
                 contact={contact}
+                mission={mission}
+                partners={partners}
                 />} />
       <Route path="/donate"
       element={

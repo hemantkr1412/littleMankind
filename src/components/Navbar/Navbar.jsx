@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import DonateButton from "../Donate/DonateButton";
 import { useEffect, useState } from "react";
-const Navbar = ({handleScroll,heroSection,projects,about,joinus,contact}) =>{
+const Navbar = ({handleScroll,heroSection,projects,about,joinus,contact,partners,mission}) =>{
 
     const navigate = useNavigate();
     const [isMenuOpen, setMenuOpen] = useState(false);
@@ -105,9 +105,9 @@ const Navbar = ({handleScroll,heroSection,projects,about,joinus,contact}) =>{
                             width:"100%",
                             height:"auto"
                             }}>
-                            <a onClick={()=>handleScroll()}>Mission</a>
+                            <a onClick={()=>handleScroll(mission)}>Mission</a>
                             <a onClick={()=>handleScroll(about)}>Team</a>
-                            <a>Partners</a>
+                            <a onClick={()=>handleScroll(partners)}>Partners</a>
                             </div>
                         </div>
                 </div>

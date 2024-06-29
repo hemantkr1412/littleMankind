@@ -1,6 +1,6 @@
-const WhatweDo = () => {
+const WhatweDo = ({mission}) => {
     return(
-        <div style={{
+        <div   style={{
             backgroundColor:"white",
             width:"100%",
             height:"auto",
@@ -244,7 +244,7 @@ const WhatweDo = () => {
         {/* our mission section */}
 
 
-        <div style={{
+        <div ref={mission} style={{
            
         }}>
             <p style={{

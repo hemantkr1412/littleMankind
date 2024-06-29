@@ -1,6 +1,7 @@
-const Partners = ()=>{
+const Partners = ({partners})=>{
     return(
         <div
+        ref={partners}
         style={{
             marginTop:"5rem",
             width:"100%",
@@ -8,8 +9,7 @@ const Partners = ()=>{
             height:"auto",
             flexDirection:"column",
             alignItems:"center",
-            backgroundColor:"white"
-,
+            backgroundColor:"white",
             
         }}
         >
