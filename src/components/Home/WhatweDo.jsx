@@ -112,7 +112,7 @@ const WhatweDo = () => {
                     gap:"2rem"
                 }}
                 >
-                    <img src="./Vector.png" alt="Image" style={{
+                    <img src="./Vector.svg" alt="Image" style={{
                         width:"45px",
                         height:"40px"
                     }}/>
@@ -141,7 +141,7 @@ const WhatweDo = () => {
                     
                 }}
                 >
-                    <img src="./Vector2.png" alt="Image" style={{
+                    <img src="./Vector (1).svg" alt="Image" style={{
                         width:"45px",
                         height:"40px"
                     }}/>
@@ -182,7 +182,7 @@ const WhatweDo = () => {
                     
                 }}
                 >
-                    <img src="./Vector3.png" alt="Image" style={{
+                    <img src="./Vector (2).svg" alt="Image" style={{
                         width:"45px",
                         height:"45px"
                     }}/>
@@ -211,7 +211,7 @@ const WhatweDo = () => {
         
                 }}
                 >
-                    <img src="./Vector4.png" alt="Image" style={{
+                    <img src="./Vector (3).svg" alt="Image" style={{
                         width:"45px",
                         height:"40px"
                     }}/>

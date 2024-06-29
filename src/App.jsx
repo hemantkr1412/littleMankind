@@ -39,6 +39,7 @@ function App() {
      />
      <Routes>
      <Route path="/" element={ <Home 
+                handleScroll={handleScroll}
                 heroSection={heroSection}
                 projects={projects}
                 about={about}

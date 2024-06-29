@@ -62,7 +62,7 @@ const Team = ({about}) =>{
                         textAlign: "center",
                          color:"white"
                         }}>
-                        VINYA
+                        VINAYA
                         </p>
                     </div>
                     <div>

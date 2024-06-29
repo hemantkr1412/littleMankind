@@ -1,4 +1,4 @@
-const JoinUs = ({joinus})=>{
+const JoinUs = ({handleScroll,joinus,contact})=>{
     return(
         <div
         ref={joinus}
@@ -61,43 +61,61 @@ const JoinUs = ({joinus})=>{
                 gap:"2rem"
             }}>
                 
-                <div className="box" style={{
+                <div
+                onClick={()=>{
+                    handleScroll(contact)
+                }}
+                 className="box" style={{
                     backgroundColor:"white",
                     padding:"1rem",
-                    width:"300px"
+                    width:"300px",
+                    cursor:"pointer"
+                    
                 }}>
                     <div className="box-item">
                         <img src={"./indvImage.png"}  />
                         <div className="box-text">
-                        <h4>Individual</h4>
+                        <h4>INDIVIDUAL</h4>
                         <p>Join the ranks of dedicated individuals and make a difference.</p>
                         </div>
                     </div>
                 </div>
-                <div className="box" style={{
+                <div
+                onClick={()=>{
+                    handleScroll(contact)
+                }}
+                 className="box" style={{
                     backgroundColor:"white",
                     padding:"1rem",
-                    width:"300px"
+                    width:"300px",
+                    cursor:"pointer"
+                    
                 }}>
                     <div  className="box-item">
                         <img src={"./csrImage.png"}  />
                         <div className="box-text">
-                        <h4>Individual</h4>
-                        <p>Join the ranks of dedicated individuals and make a difference.</p>
+                        <h4>CSR PARTNER</h4>
+                        <p>Supporting corporates to achieve their CSR goals year after year.</p>
                         </div>
                         
                     </div>
                 </div>
-                <div className="box" style={{
+                <div
+                onClick={()=>{
+                    handleScroll(contact)
+                }}
+                 className="box" style={{
                     backgroundColor:"white",
                     padding:"1rem",
-                    width:"300px"
+                    width:"300px",
+                    cursor:"pointer"
+                    
                 }}>
                     <div  className="box-item">
                         <img src={"./InstImage.png"}  />
                         <div className="box-text">
-                        <h4>Individual</h4>
-                        <p>Join the ranks of dedicated individuals and make a difference.</p>
+                        <h4>INSTITUTIONS</h4>
+                        <p>Empowering leaders of tomorrow to be nature lovers.</p>
                         </div>
                         
                     </div>
