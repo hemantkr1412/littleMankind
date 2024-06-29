@@ -10,47 +10,12 @@ import './HeroSection.css'; // For custom styling
 
 
 
-const HeroSection = ({heroSection}) => {
+const HeroSection = ({heroSection,images}) => {
 
   
 
 
-  const imagesBG = [
-    { id: 1, src: './bgImage1.png', alt: 'Image 1', text: 'Welcome to Little Mankind' },
-    { id: 2, src: './bgImage2.jpg', alt: 'Image 2', text: 'Supporting Women, Strengthening Society' },
-    { id: 3, src: './bgImage3.jpg', alt: 'Image 3', text: 'Nurturing the Future, One Child at a Time' },
-    { id: 3, src: './bgImage4.jpg', alt: 'Image 3', text: 'Growing a Greener Tomorrow Together' },
-    // Add more images as needed
-  ];
 
-  const [images,setImages] = useState(imagesBG);
-
-
-  const imagesMobileBG = [
-    { id: 1, src: './bgImageMob1.png', alt: 'Image 1', text: 'Welcome to Little Mankind' },
-    { id: 2, src: './bgImageMob2.png', alt: 'Image 2', text: 'Supporting Women, Strengthening Society' },
-    { id: 3, src: './bgImageMob3.png', alt: 'Image 3', text: 'Nurturing the Future, One Child at a Time' },
-    { id: 3, src: './bgImageMob4.png', alt: 'Image 3', text: 'Growing a Greener Tomorrow Together' },
-    // Add more images as needed
-  ];
-
-  useEffect(()=>{
-    const updateSlidesToShow = () => {
-      const screenWidth = window.innerWidth;
-
-      if(screenWidth <= 500){
-        setImages(imagesMobileBG);
-      }else{
-        setImages(imagesBG);
-      }
-    };
-    updateSlidesToShow();
-    window.addEventListener("resize", updateSlidesToShow);
-
-    return () => {
-      window.removeEventListener("resize", updateSlidesToShow);
-    };
-  },[])
 
   const settings = {
     dots: true,

@@ -1,10 +1,54 @@
+import { useEffect, useState } from "react";
 import { ImageCard } from "./AnimalWelfareProject";
 
 import "./project.css"
+import HeroSection from "../Home/Herosection";
+import BgCarausal from "../Home/BgCarausal";
 const Forest = ()=>{
+    const imagesBG = [
+        { id: 1, src: './t1.jpg', alt: 'Image 1', text: ' PLANTING TREES, CULTIVATING A GREENER FUTURE' },
+        { id: 2, src: './t2.jpg', alt: 'Image 2', text: 'PLANTING TREES, CULTIVATING A GREENER FUTURE' },
+        { id: 3, src: './t3.jpg', alt: 'Image 3', text: ' PLANTING TREES, CULTIVATING A GREENER FUTURE' },
+        // Add more images as needed
+      ];
+    
+      const [images,setImages] = useState(imagesBG);
+    
+    
+      const imagesMobileBG = [
+        { id: 1, src: './ron-hansen-MmfIwBHX1bY-unsplash 1 (5).png', alt: 'Image 1', text: ' PLANTING TREES, CULTIVATING A GREENER FUTURE' },
+        { id: 2, src: './ron-hansen-MmfIwBHX1bY-unsplash 1 (6).png', alt: 'Image 2', text: ' PLANTING TREES, CULTIVATING A GREENER FUTURE' },
+        { id: 3, src: './ron-hansen-MmfIwBHX1bY-unsplash 1 (7).png', alt: 'Image 3', text: ' PLANTING TREES, CULTIVATING A GREENER FUTURE' },
+       
+        // Add more images as needed
+      ];
+    
+      useEffect(()=>{
+        const updateSlidesToShow = () => {
+          const screenWidth = window.innerWidth;
+    
+          if(screenWidth <= 500){
+            setImages(imagesMobileBG);
+          }else{
+            setImages(imagesBG);
+          }
+        };
+        updateSlidesToShow();
+        window.addEventListener("resize", updateSlidesToShow);
+    
+        return () => {
+          window.removeEventListener("resize", updateSlidesToShow);
+        };
+      },[]);
+
+
     return(
         <>
-        <div 
+        <BgCarausal
+        images={images}
+        text={images[0].text}
+        />
+        {/* <div 
 
         className="donateMainContainer"
         style={{
@@ -34,7 +78,7 @@ const Forest = ()=>{
               <br />
               CULTIVATING A GREENER FUTURE
             </h1>
-        </div>
+        </div> */}
         <div style={{
             width:"100%",
             height:"150px",

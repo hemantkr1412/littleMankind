@@ -1,10 +1,53 @@
+import { useEffect, useState } from "react";
 import { ImageCard } from "./AnimalWelfareProject";
 
 import "./project.css"
+import HeroSection from "../Home/Herosection";
+import BgCarausal from "../Home/BgCarausal";
 const ChildrenWelfare = ()=>{
+    const imagesBG = [
+        { id: 1, src: './c1.jpg', alt: 'Image 1', text: ' CARING FOR KIDS,BUILDING BRIGHT TOMORROWS' },
+        { id: 2, src: './c2.jpg', alt: 'Image 2', text: 'CARING FOR KIDS,BUILDING BRIGHT TOMORROWS' },
+        { id: 3, src: './c3.jpg', alt: 'Image 3', text: ' CARING FOR KIDS,BUILDING BRIGHT TOMORROWS' },
+        { id: 3, src: './c4.jpg', alt: 'Image 3', text: ' CARING FOR KIDS,BUILDING BRIGHT TOMORROWS' },
+        // Add more images as needed
+      ];
+    
+      const [images,setImages] = useState(imagesBG);
+    
+    
+      const imagesMobileBG = [
+        { id: 1, src: './ron-hansen-MmfIwBHX1bY-unsplash1.png', alt: 'Image 1', text: ' CARING FOR KIDS,BUILDING BRIGHT TOMORROWS' },
+        { id: 2, src: './ron-hansen-MmfIwBHX1bY-unsplash 1 (2).png', alt: 'Image 2', text: ' CARING FOR KIDS,BUILDING BRIGHT TOMORROWS' },
+        { id: 3, src: './ron-hansen-MmfIwBHX1bY-unsplash 1 (3).png', alt: 'Image 3', text: ' CARING FOR KIDS,BUILDING BRIGHT TOMORROWS' },
+        { id: 3, src: './ron-hansen-MmfIwBHX1bY-unsplash 1 (4).png', alt: 'Image 3', text: ' CARING FOR KIDS,BUILDING BRIGHT TOMORROWS' },
+        // Add more images as needed
+      ];
+    
+      useEffect(()=>{
+        const updateSlidesToShow = () => {
+          const screenWidth = window.innerWidth;
+    
+          if(screenWidth <= 500){
+            setImages(imagesMobileBG);
+          }else{
+            setImages(imagesBG);
+          }
+        };
+        updateSlidesToShow();
+        window.addEventListener("resize", updateSlidesToShow);
+    
+        return () => {
+          window.removeEventListener("resize", updateSlidesToShow);
+        };
+      },[]);
     return(
         <>
-        <div 
+        <BgCarausal 
+        images={images}
+        text={images[0].text}
+        />
+        {/* <div 
 
         className="donateMainContainer"
         style={{
@@ -33,7 +76,7 @@ const ChildrenWelfare = ()=>{
               CARING FOR KIDS,
               BUILDING BRIGHT TOMORROWS
             </h1>
-        </div>
+        </div> */}
         <div style={{
             width:"100%",
             height:"150px",

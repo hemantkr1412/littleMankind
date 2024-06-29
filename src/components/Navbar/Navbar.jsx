@@ -165,7 +165,7 @@ const Navbar = ({handleScroll,heroSection,projects,about,joinus,contact}) =>{
             <div className="menuList">
             <p>Home</p>
             <div className="mRedLine" />
-            <Link to="/comunidadAcademica" onClick={toggleMenu}>
+            <Link to="/" onClick={toggleMenu}>
                 <p>Projects</p>
             </Link>
             <div className="mRedLine" />
