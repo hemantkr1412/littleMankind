@@ -1,6 +1,5 @@
 import { useEffect, useRef, useState } from "react";
 import { ImageCard } from "./AnimalWelfareProject";
-
 import "./project.css"
 import HeroSection from "../Home/Herosection";
 import BgCarausal from "../Home/BgCarausal";

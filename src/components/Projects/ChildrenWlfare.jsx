@@ -7,6 +7,8 @@ import BgCarausal from "../Home/BgCarausal";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+
+
 const ChildrenWelfare = ()=>{
   const sliderRef = useRef(null);
     const imagesBG = [
@@ -129,10 +131,10 @@ const ChildrenWelfare = ()=>{
             height:"100vh",
             width:"100%",
             display:"flex",
-            // alignItems:"center",
+            alignItems:"center",
             // padding:"3rem",
             justifyContent:"space-between",
-            gap:"3rem"
+            // gap:"3rem"
         }}>
              <div 
         
@@ -267,7 +269,7 @@ const ChildrenWelfare = ()=>{
                         </div>
                         </button>
                     </div>
-                  </div>
+              </div>
 
         </div>
 
