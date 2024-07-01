@@ -1,11 +1,18 @@
 
 import "./project.css";
 import HeroSection from "../Home/Herosection";
-import { useEffect, useState } from "react";
+import { useEffect, useState,useRef } from "react";
 import BgCarausal from "../Home/BgCarausal";
+import Carousal from "../Home/CarousalBox";
+import CarousalImage from "../Home/CarousalImage";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 
 const AnimalWelfare = ()=>{
+  const sliderRef = useRef(null);
+
     const imagesBG = [
         { id: 1, src: './11.jpg', alt: 'Image 1', text: ' DEFENDING WILDLIFE, SECURING THEIR TOMORROW' },
         { id: 2, src: './44.jpg', alt: 'Image 2', text: ' DEFENDING WILDLIFE, SECURING THEIR TOMORROW' },
@@ -24,6 +31,26 @@ const AnimalWelfare = ()=>{
         { id: 3, src: './ron-hansen-MmfIwBHX1bY-unsplash4.png', alt: 'Image 3', text: ' DEFENDING WILDLIFE, SECURING THEIR TOMORROW' },
         // Add more images as needed
       ];
+
+      const settings = {
+        dots: false,
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        pauseOnHover: true,
+      };
+    
+      const handlePrev = () => {
+        sliderRef.current.slickPrev();
+      };
+    
+      const handleNext = () => {
+        sliderRef.current.slickNext();
+      };
+
     
       useEffect(()=>{
         const updateSlidesToShow = () => {
@@ -100,7 +127,6 @@ const AnimalWelfare = ()=>{
             </h3>
         </div>
         <div 
-        
         style={{
             background: "linear-gradient(110.59deg, #030016 0%, #130058 100%)",
             minHeight:"800px",
@@ -138,6 +164,100 @@ const AnimalWelfare = ()=>{
                     
 
                 </div>
+                  <div className="welfareImageMainBoxMobile" style={{
+                    padding:"0rem"
+                  }}>
+                      <div className="slider-containerImage">
+                        <button className="prevImage" onClick={handlePrev}>
+                          <div className="arrowIconBox" style={{
+                            width:"20px",
+                            height:"20px",
+                            padding:"0.3rem",
+                            borderRadius:"50%",
+                            display:"flex",
+                            justifyContent:"center",
+                            alignItems:"center"
+                          }}>
+                            <img src='./arrow.svg' alt="arrowIcon" style={{
+                              transform:"rotate(180deg)"
+                            }}/>
+                        </div>
+                        </button>
+                        <div className="slider-boxImage">
+        
+                              <Slider ref={sliderRef} {...settings} className="slider">
+                                <div className="boxImage">
+                                  <div style={{
+                                    width:"270px"
+                                  }} className="box-itemImage">
+                                   <ImageCard 
+                                    url={'./animalImage1.png'}
+                                    />
+                                  </div>
+                              </div>
+                              <div className="boxImage">
+                                  <div style={{
+                                    width:"270px"
+                                  }} className="box-itemImage">
+                                   <ImageCard 
+                                    url={'./animalImage2.png'}
+                                    />
+                                  </div>
+                              </div>
+                              <div className="boxImage">
+                                  <div style={{
+                                    width:"270px"
+                                  }} className="box-itemImage">
+                                   <ImageCard 
+                                    url={'./animalImage3.png'}
+                                    />
+                                  </div>
+                              </div>
+                              <div className="boxImage">
+                                  <div style={{
+                                    width:"270px"
+                                  }} className="box-itemImage">
+                                   <ImageCard 
+                                    url={'./animalImage4.png'}
+                                    />
+                                  </div>
+                              </div>
+                              <div className="boxImage">
+                                  <div style={{
+                                    width:"270px"
+                                  }} className="box-itemImage">
+                                   <ImageCard 
+                                    url={'./animalImage5.png'}
+                                    />
+                                  </div>
+                              </div>
+                              <div className="boxImage">
+                                  <div style={{
+                                    width:"270px"
+                                  }} className="box-itemImage">
+                                   <ImageCard 
+                                    url={'./animalImage6.png'}
+                                    />
+                                  </div>
+                              </div>
+                              </Slider>
+                        
+                        </div>
+                        <button className="nextImage" onClick={handleNext}>
+                        <div className="arrowIconBox" style={{
+                            width:"20px",
+                            height:"20px",
+                            padding:"0.3rem",
+                            borderRadius:"50%",
+                            display:"flex",
+                            justifyContent:"center",
+                            alignItems:"center"
+                          }}>
+                            <img src='./arrow.svg' alt="arrowIcon" />
+                        </div>
+                        </button>
+                    </div>
+                  </div>
             </div>
 
         </div>

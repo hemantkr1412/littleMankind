@@ -4,6 +4,8 @@ import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import DonateButton from "../Donate/DonateButton";
 import { useEffect, useState } from "react";
+import Accordian from "./accordian";
+import JoinUs from "../Home/JoinUs";
 const Navbar = ({handleScroll,heroSection,projects,about,joinus,contact,partners,mission}) =>{
 
     const navigate = useNavigate();
@@ -114,6 +116,7 @@ const Navbar = ({handleScroll,heroSection,projects,about,joinus,contact,partners
                 <p className="para-link" onClick={()=>{
                      navigate('/')
                     handleScroll(joinus)
+                    console.log(joinus)
                 }}>Join Us</p>  
                 <p className="para-link" onClick={()=>{
                      handleScroll(contact)
@@ -162,17 +165,42 @@ const Navbar = ({handleScroll,heroSection,projects,about,joinus,contact,partners
             </Link>
             </div>
             <div className="menuList">
-            <p>Home</p>
+            <p onClick={()=>{
+                     navigate('/')
+                     console.log("Clicked")
+                    // handleScroll(joinus)
+            }}>Home</p>
             <div className="mRedLine" />
-            <Link to="/" onClick={toggleMenu}>
-                <p>Projects</p>
-            </Link>
+            <Accordian 
+            text={"Projects"}
+            heading={"Projects"}
+            setToggle={setMenuOpen}
+            isToggled={isMenuOpen}
+
+            />
+            
+            <div className="mRedLine" 
+            />
+            <Accordian 
+            text={"About"}
+            heading={"About"}
+            setToggle={setMenuOpen}
+            isToggled={isMenuOpen}
+            mission={mission}
+            about={about}
+            partners={partners}
+            handleScroll={handleScroll}
+            />
             <div className="mRedLine" />
-            <p>About</p>
+            <p onClick={()=>{
+                     navigate('/')
+                    handleScroll(joinus)
+                }}>Join Us</p>
             <div className="mRedLine" />
-            <p>Join Us</p>
-            <div className="mRedLine" />
-            <p>Contact</p>
+            <p onClick={()=>{
+                     navigate('/')
+                    handleScroll(contact)
+                }}>Contact</p>
             <div className="mRedLine" />
             </div>
         </div>

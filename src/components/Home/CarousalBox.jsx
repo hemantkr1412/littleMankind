@@ -66,9 +66,19 @@ const Carousal = () => {
   return (
     <div className="slider-container">
       <button className="prev" onClick={handlePrev}>
-      <img src='./arrowicon.png' alt="arrowIcon" style={{
-        transform:"rotate(180deg)"
-      }}/>
+      <div className="arrowIconBox" style={{
+            width:"50px",
+            height:"50px",
+            padding:"0.3rem",
+            borderRadius:"50%",
+            display:"flex",
+            justifyContent:"center",
+            alignItems:"center"
+          }}>
+            <img src='./arrow.svg' alt="arrowIcon" style={{
+              transform:"rotate(180deg)"
+            }}/>
+        </div>
       </button>
       <div className="slider-box">
         <Slider ref={sliderRef} {...settings} className="slider">
@@ -87,7 +97,17 @@ const Carousal = () => {
         </Slider>
       </div>
       <button className="next" onClick={handleNext}>
-       <img src='./arrowicon.png' alt="arrowIcon" />
+      <div className="arrowIconBox" style={{
+            width:"50px",
+            height:"50px",
+            padding:"0.3rem",
+            borderRadius:"50%",
+            display:"flex",
+            justifyContent:"center",
+            alignItems:"center"
+          }}>
+            <img src='./arrow.svg' alt="arrowIcon" />
+        </div>
       </button>
     </div>
   );

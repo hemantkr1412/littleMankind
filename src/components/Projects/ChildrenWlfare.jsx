@@ -1,10 +1,14 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { ImageCard } from "./AnimalWelfareProject";
 
 import "./project.css"
 import HeroSection from "../Home/Herosection";
 import BgCarausal from "../Home/BgCarausal";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 const ChildrenWelfare = ()=>{
+  const sliderRef = useRef(null);
     const imagesBG = [
         { id: 1, src: './c1.jpg', alt: 'Image 1', text: ' CARING FOR KIDS,BUILDING BRIGHT TOMORROWS' },
         { id: 2, src: './c2.jpg', alt: 'Image 2', text: 'CARING FOR KIDS,BUILDING BRIGHT TOMORROWS' },
@@ -23,6 +27,25 @@ const ChildrenWelfare = ()=>{
         { id: 3, src: './ron-hansen-MmfIwBHX1bY-unsplash 1 (4).png', alt: 'Image 3', text: ' CARING FOR KIDS,BUILDING BRIGHT TOMORROWS' },
         // Add more images as needed
       ];
+      
+      const settings = {
+        dots: false,
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        pauseOnHover: true,
+      };
+    
+      const handlePrev = () => {
+        sliderRef.current.slickPrev();
+      };
+    
+      const handleNext = () => {
+        sliderRef.current.slickNext();
+      };
     
       useEffect(()=>{
         const updateSlidesToShow = () => {
@@ -151,6 +174,100 @@ const ChildrenWelfare = ()=>{
 
                 </div>
             </div>
+            <div className="welfareImageMainBoxMobile" style={{
+                    padding:"0rem"
+                  }}>
+                      <div className="slider-containerImage">
+                        <button className="prevImage" onClick={handlePrev}>
+                          <div className="arrowIconBox" style={{
+                            width:"20px",
+                            height:"20px",
+                            padding:"0.3rem",
+                            borderRadius:"50%",
+                            display:"flex",
+                            justifyContent:"center",
+                            alignItems:"center"
+                          }}>
+                            <img src='./arrow.svg' alt="arrowIcon" style={{
+                              transform:"rotate(180deg)"
+                            }}/>
+                        </div>
+                        </button>
+                        <div className="slider-boxImage">
+        
+                              <Slider ref={sliderRef} {...settings} className="slider">
+                                <div className="boxImage">
+                                  <div style={{
+                                    width:"270px"
+                                  }} className="box-itemImage">
+                                   <ImageCard 
+                                    url={'./animalImage1.png'}
+                                    />
+                                  </div>
+                              </div>
+                              <div className="boxImage">
+                                  <div style={{
+                                    width:"270px"
+                                  }} className="box-itemImage">
+                                   <ImageCard 
+                                    url={'./animalImage2.png'}
+                                    />
+                                  </div>
+                              </div>
+                              <div className="boxImage">
+                                  <div style={{
+                                    width:"270px"
+                                  }} className="box-itemImage">
+                                   <ImageCard 
+                                    url={'./animalImage3.png'}
+                                    />
+                                  </div>
+                              </div>
+                              <div className="boxImage">
+                                  <div style={{
+                                    width:"270px"
+                                  }} className="box-itemImage">
+                                   <ImageCard 
+                                    url={'./animalImage4.png'}
+                                    />
+                                  </div>
+                              </div>
+                              <div className="boxImage">
+                                  <div style={{
+                                    width:"270px"
+                                  }} className="box-itemImage">
+                                   <ImageCard 
+                                    url={'./animalImage5.png'}
+                                    />
+                                  </div>
+                              </div>
+                              <div className="boxImage">
+                                  <div style={{
+                                    width:"270px"
+                                  }} className="box-itemImage">
+                                   <ImageCard 
+                                    url={'./animalImage6.png'}
+                                    />
+                                  </div>
+                              </div>
+                              </Slider>
+                        
+                        </div>
+                        <button className="nextImage" onClick={handleNext}>
+                        <div className="arrowIconBox" style={{
+                            width:"20px",
+                            height:"20px",
+                            padding:"0.3rem",
+                            borderRadius:"50%",
+                            display:"flex",
+                            justifyContent:"center",
+                            alignItems:"center"
+                          }}>
+                            <img src='./arrow.svg' alt="arrowIcon" />
+                        </div>
+                        </button>
+                    </div>
+                  </div>
 
         </div>
 

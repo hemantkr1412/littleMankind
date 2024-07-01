@@ -247,6 +247,7 @@ cursor: pointer;
     /* height: 40px; */
     text-align: left;
     padding: 0.6rem;
+    cursor: pointer;
   }
 
   .mRedLine {

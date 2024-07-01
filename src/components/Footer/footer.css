@@ -23,6 +23,10 @@
                          
 }
 
+.footerContainerSocialIcon img{
+    cursor: pointer;
+}
+
 @media (max-width: 800px) {
     /* Your CSS styles for screens narrower than 13-inch laptops */
     .footerMainContainer{
