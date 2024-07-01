@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 
 
 
-const Accordian = ({ heading, text, index,setToggle,isToggled,misson,about,partners,handleScroll}) => {
+const Accordian = ({ heading, text, index,setToggle,isToggled,mission,about,partners,handleScroll}) => {
 	const [isActive, setIsActive] = useState(false);
 
     const navigate = useNavigate();
@@ -33,7 +33,7 @@ const Accordian = ({ heading, text, index,setToggle,isToggled,misson,about,partn
     const aboutList = [
         {
             name:"Mission",
-            ref:misson
+            ref:mission
         },
         {
             name:"Team",
@@ -44,6 +44,10 @@ const Accordian = ({ heading, text, index,setToggle,isToggled,misson,about,partn
             ref:partners
         },
     ]
+
+    console.log(mission)
+    console.log(about)
+    console.log(partners)
 
 
 
@@ -137,7 +141,7 @@ const Accordian = ({ heading, text, index,setToggle,isToggled,misson,about,partn
                                 fontSize:"1rem"
                             }}
                             onClick={() =>{
-                                // handleScroll(link.ref)
+                                handleScroll(link.ref)
                                 
                                 setToggle(!isToggled)
                                 console.log(link.ref)

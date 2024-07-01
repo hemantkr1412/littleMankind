@@ -46,7 +46,11 @@ const Navbar = ({handleScroll,heroSection,projects,about,joinus,contact,partners
         borderRadius: '50px',
         background: 'linear-gradient(104.61deg, rgba(0, 0, 0, 0.6) 7.21%, #EFEFEF 26.13%, #8C18E7 56.01%)',
     };
+
     
+    console.log(mission)
+    console.log(about)
+    console.log(partners)
 
 
     return(
@@ -167,7 +171,8 @@ const Navbar = ({handleScroll,heroSection,projects,about,joinus,contact,partners
             <div className="menuList">
             <p onClick={()=>{
                      navigate('/')
-                     console.log("Clicked")
+                     handleScroll(heroSection)
+                     toggleMenu()
                     // handleScroll(joinus)
             }}>Home</p>
             <div className="mRedLine" />
@@ -195,11 +200,14 @@ const Navbar = ({handleScroll,heroSection,projects,about,joinus,contact,partners
             <p onClick={()=>{
                      navigate('/')
                     handleScroll(joinus)
+                    toggleMenu()
+
                 }}>Join Us</p>
             <div className="mRedLine" />
             <p onClick={()=>{
                      navigate('/')
                     handleScroll(contact)
+                    toggleMenu()
                 }}>Contact</p>
             <div className="mRedLine" />
             </div>
