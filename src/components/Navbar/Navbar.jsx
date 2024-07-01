@@ -111,20 +111,18 @@ const Navbar = ({handleScroll,heroSection,projects,about,joinus,contact,partners
                             width:"100%",
                             height:"auto"
                             }}>
-                            <a onClick={()=>handleScroll(mission)}>Mission</a>
-                            <a onClick={()=>handleScroll(about)}>Team</a>
-                            <a onClick={()=>handleScroll(partners)}>Partners</a>
+                            <a onClick={()=>  navigate('/?scroll=mission')}>Mission</a>
+                            <a onClick={()=>  navigate('/?scroll=team')}>Team</a>
+                            <a onClick={()=>  navigate('/?scroll=partners')}>Partners</a>
                             </div>
                         </div>
                 </div>
                 <p className="para-link" onClick={()=>{
-                     navigate('/')
-                    handleScroll(joinus)
-                    console.log(joinus)
+                    navigate('/?scroll=joinus');
                 }}>Join Us</p>  
                 <p className="para-link" onClick={()=>{
-                     handleScroll(contact)
-                     navigate('/')
+                    //  handleScroll(contact)
+                     navigate('/?scroll=contact');
                 }}>Contact</p>
 
             </div>
@@ -173,7 +171,6 @@ const Navbar = ({handleScroll,heroSection,projects,about,joinus,contact,partners
                      navigate('/')
                      handleScroll(heroSection)
                      toggleMenu()
-                    // handleScroll(joinus)
             }}>Home</p>
             <div className="mRedLine" />
             <Accordian 

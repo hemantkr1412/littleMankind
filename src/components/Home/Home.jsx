@@ -8,8 +8,10 @@ import Partners from "./Partners";
 import JoinUs from "./JoinUs";
 import ContactUs from "./ContactUs";
 import { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 
 const Home = ({heroSection,handleScroll,projects,about,joinus,contact,mission,partners}) =>{
+   
     const imagesBG = [
         { id: 1, src: './bgImage1.png', alt: 'Image 1', text: 'Welcome to Little Mankind' },
         { id: 2, src: './bgImage2.jpg', alt: 'Image 2', text: 'Supporting Women, Strengthening Society' },
@@ -19,6 +21,7 @@ const Home = ({heroSection,handleScroll,projects,about,joinus,contact,mission,pa
       ];
     
       const [images,setImages] = useState(imagesBG);
+      const location = useLocation();
     
     
       const imagesMobileBG = [
@@ -39,13 +42,37 @@ const Home = ({heroSection,handleScroll,projects,about,joinus,contact,mission,pa
             setImages(imagesBG);
           }
         };
+        
         updateSlidesToShow();
         window.addEventListener("resize", updateSlidesToShow);
     
         return () => {
           window.removeEventListener("resize", updateSlidesToShow);
         };
-      },[])
+      },[]);
+
+      useEffect(() => {
+        const sections = {
+            contact: contact,
+            joinus: joinus,
+            mission: mission,
+            partners: partners,
+            team: about
+        };
+
+        const handleLocationChange = () => {
+            const params = new URLSearchParams(location.search);
+            const section = params.get('scroll');
+            if (section && sections[section]) {
+                window.scrollTo({
+                    top: sections[section].current.offsetTop - 100,
+                    behavior: "smooth"
+                });
+            }
+        };
+
+        handleLocationChange();
+    }, [location]);
 
     return(
         <div >

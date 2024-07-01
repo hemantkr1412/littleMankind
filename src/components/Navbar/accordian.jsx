@@ -33,21 +33,18 @@ const Accordian = ({ heading, text, index,setToggle,isToggled,mission,about,part
     const aboutList = [
         {
             name:"Mission",
-            ref:mission
+            href:'/?scroll=mission'
         },
         {
             name:"Team",
-            ref:about
+            href:'/?scroll=team'
         },
         {
             name:"Partners",
-            ref:partners
+            href:'/?scroll=partners'
         },
     ]
-
-    console.log(mission)
-    console.log(about)
-    console.log(partners)
+	
 
 
 
@@ -141,10 +138,10 @@ const Accordian = ({ heading, text, index,setToggle,isToggled,mission,about,part
                                 fontSize:"1rem"
                             }}
                             onClick={() =>{
-                                handleScroll(link.ref)
-                                
+                                // handleScroll(link.ref)
+                                navigate(link.href);
                                 setToggle(!isToggled)
-                                console.log(link.ref)
+                                // console.log(link.ref)
                             }}
                             >
                                 {link.name}
