@@ -26,6 +26,7 @@ const HeroSection = ({heroSection,images}) => {
     autoplay: true,
     autoplaySpeed: 2000,
     arrows: false,
+    fade: true,
     appendDots: dots => (
       <div
         style={{

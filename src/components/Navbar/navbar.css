@@ -19,6 +19,17 @@
     align-items: center;
   }
 
+  @keyframes animateGradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+  }
 
 
 .para-link{
@@ -71,6 +82,7 @@ cursor: pointer;
   text-decoration: none;
   display: block;
   border-bottom: 1px solid black;
+  cursor: pointer;
 }
 
 /* Change color of dropdown links on hover */

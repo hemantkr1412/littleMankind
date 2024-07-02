@@ -230,7 +230,7 @@ const WomenWelfare = ()=>{
                                     width:"270px"
                                   }} className="box-itemImage">
                                    <ImageCard 
-                                    url={'./animalImage4.png'}
+                                    url={'./animalImage2.png'}
                                     />
                                   </div>
                               </div>

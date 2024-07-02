@@ -23,6 +23,7 @@ const BgCarausal = ({ heroSection, images,text }) => {
           bottom: '40px',
           width: '100%',
           display: 'flex',
+          alignContent:"center",
           justifyContent: 'center',
         }}
       >
@@ -31,6 +32,7 @@ const BgCarausal = ({ heroSection, images,text }) => {
     ),
     customPaging: i => (
       <div
+        
         style={{
           width: '12px',
           height: '12px',

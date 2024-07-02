@@ -35,12 +35,9 @@ const OurEfforts = () =>{
                     }}>
                         Fruits of
                     </p>
-                    <p style={{
+                    <p className="sectionHeading" style={{
                     color:"black",
-                    fontWeight:"700",
-                    fontSize:"50px",
-                    lineHeight:"75px",
-                    textAlign:"center",
+                  
                     }}>
                     OUR EFFORTS
                     </p> 

@@ -47,13 +47,11 @@ const ContactUs = ({contact})=>{
             alignItems:"center"
           }}
         >
-          <p
+          <p 
+          className="sectionHeading"
             style={{
               color: "white",
-              fontWeight: "700",
-              fontSize: "50px",
-              lineHeight: "75px",
-              textAlign: "center",
+              
               marginTop: "80px"
             }}
           >

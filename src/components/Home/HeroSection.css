@@ -39,9 +39,11 @@
   }
 
   .whatwedoContainerSub{
+    gap: 6rem;
     width:60%;
   }
   .whatwedoContainerSub2{
+    gap: 6rem;
     width:40%;
   }
   
@@ -146,6 +148,32 @@ text-align: left;
   padding: 3rem;
 }
 
+.sectionHeading{
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 75px;
+  letter-spacing: 0.06em;
+  text-align: center;
+}
+
+
+@keyframes gradientAnimation {
+  0% {
+      background-position: 0% 50%;
+  }
+  100% {
+      background-position: 100% 50%;
+  }
+}
+
+/* Apply the animation to the text */
+.gradient-text {
+  background: linear-gradient(90deg, #ff6b6b, #f06595, #9b5de5, #5f3dc4);
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientAnimation 3s ease infinite;
+}
 
   
 
@@ -154,15 +182,20 @@ text-align: left;
   .whatwedoContainer{
     width: 90%;
     flex-direction: column;
-    height:600px;
+    height:auto;
     padding: 1rem;
+    gap: 2rem;
   }
   .whatwedoContainerSub{
+    margin-top: 2rem;
+    gap: 2rem;
     width:100%;
 
   }
   .whatwedoContainerSub2{
+    gap: 2rem;
     width:100%;
+    margin-bottom: 2rem;
   }
   .whatwedoContainer p{
     font-size: 20px;
@@ -220,6 +253,14 @@ text-align: left;
   }
   .teamContainerSub{
     padding: 1rem;
+  }
+  .sectionHeading{
+    font-size: 27px;
+    font-weight: 700;
+    line-height: 36px;
+    letter-spacing: 0.06em;
+    text-align: center;
+    
   }
     
 }

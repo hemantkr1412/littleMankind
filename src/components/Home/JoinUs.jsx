@@ -27,12 +27,9 @@ const JoinUs = ({handleScroll,joinus,contact})=>{
             <div style={{
                 
             }}>
-                <p style={{
+                <p className="sectionHeading" style={{
                 color:"black",
-                fontWeight:"700",
-                fontSize:"50px",
-                lineHeight:"75px",
-                textAlign:"center",
+                
                 }}>
                 JOIN US
                 </p> 

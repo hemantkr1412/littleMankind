@@ -1,4 +1,9 @@
+
+
 const WhatweDo = ({mission}) => {
+
+
+
     return(
         <div   style={{
             backgroundColor:"white",
@@ -12,12 +17,8 @@ const WhatweDo = ({mission}) => {
            <div style={{
            
            }}>
-               <p style={{
+               <p className="sectionHeading" style={{
                 color:"black",
-                fontWeight:"700",
-                fontSize:"50px",
-                lineHeight:"75px",
-                textAlign:"center",
                  marginTop:"80px"
                }}>
                     WHAT WE DO
@@ -102,7 +103,6 @@ const WhatweDo = ({mission}) => {
                 display:"flex",
                 flexDirection:"column",
                 alignItems:"center",
-                gap:"6rem"
             }}>
                 <div
                 style={{
@@ -170,7 +170,6 @@ const WhatweDo = ({mission}) => {
                 height:"100",
                 display:"flex",
                 flexDirection:"column",
-                  gap:"6rem"
             }}>
                    <div
                 style={{
@@ -247,12 +246,9 @@ const WhatweDo = ({mission}) => {
         <div ref={mission} style={{
            
         }}>
-            <p style={{
+            <p className="sectionHeading" style={{
              color:"black",
-             fontWeight:"700",
-             fontSize:"50px",
-             lineHeight:"75px",
-             textAlign:"center",
+             
               marginTop:"80px"
             }}>
                OUR MISSION

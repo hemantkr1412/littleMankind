@@ -45,3 +45,23 @@
 }
 
 
+@media (max-width: 450px) {
+    .welfareImageMainBoxMobile button{
+        display: none;
+    }
+    
+ 
+ }
+ 
+
+
+ @media (max-width: 350px) {
+    .welfareImageMainBoxMobile button{
+        display: none;
+    }
+    
+ 
+    .welfareImageBox{
+      width: 250px;
+    }
+ }

@@ -22,30 +22,35 @@ const Navbar = ({handleScroll,heroSection,projects,about,joinus,contact,partners
             document.body.classList.remove("no-scroll");
             }
         }, [isMenuOpen]);
-
-    const buttonStyle = {
-        background: 'white',
-        padding: '10px 20px',
-        color: 'black',
-        cursor: 'pointer',
-        fontSize: '16px',
-        border: 'none',
-        position: 'relative',
-        zIndex: 1,
-        borderRadius: '50px', // Added border radius to match the gradient border
-        transition: 'background 0.3s ease' // Smooth transition
-    };
-    
-    const gradientBorderStyle = {
-        position: 'absolute',
-        top: '-4px',
-        left: '-4px',
-        right: '-4px',
-        bottom: '-4px',
-        zIndex: -1,
-        borderRadius: '50px',
-        background: 'linear-gradient(104.61deg, rgba(0, 0, 0, 0.6) 7.21%, #EFEFEF 26.13%, #8C18E7 56.01%)',
-    };
+        const buttonStyle = {
+            background: 'white',
+            padding: '10px 20px',
+            color: 'black',
+            cursor: 'pointer',
+            fontSize: '16px',
+            border: 'none',
+            position: 'relative',
+            zIndex: 1,
+            borderRadius: '50px', // Added border radius to match the gradient border
+            transition: 'background 0.3s ease' // Smooth transition
+        };
+        
+        const gradientBorderStyle = {
+            position: 'absolute',
+            top: '-4px',
+            left: '-4px',
+            right: '-4px',
+            bottom: '-4px',
+            zIndex: -1,
+            borderRadius: '50px',
+            background: 'linear-gradient(104.61deg, rgba(0, 0, 0, 0.6) 7.21%, #EFEFEF 26.13%, #8C18E7 56.01%)',
+            backgroundSize: '200% 200%', // Ensure the gradient covers the entire area
+            animation: 'animateGradient 4s linear infinite' // Add gradient animation
+        };
+        
+        const hoverStyle = {
+            background: 'linear-gradient(104.61deg, rgba(0, 0, 0, 0.6) 7.21%, #EFEFEF 26.13%, #8C18E7 56.01%)'
+        };
 
     
     console.log(mission)

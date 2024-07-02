@@ -27,6 +27,7 @@ const Team = ({about}) =>{
                 alignItems:"center",
             }}>
                 <h1
+                    className="sectionHeading"
                     style={{
                         color:"white"
                     }}

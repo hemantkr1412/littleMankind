@@ -8,7 +8,7 @@ const buttonStyle = {
     fontSize: '16px',
     border: 'none',
     position: 'relative',
-    fontWeight:"500",
+    fontWeight: "500",
     zIndex: 1,
     borderRadius: '50px', // Added border radius to match the gradient border
     transition: 'background 0.3s ease' // Smooth transition
@@ -28,13 +28,15 @@ const gradientBorderStyle = {
     WebkitMask: 'linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)',
     WebkitMaskComposite: 'xor',
     maskComposite: 'exclude',
+    backgroundSize: '200% 200%', // Ensure the gradient covers the entire area
+    animation: 'animateGradient 4s linear infinite' // Add gradient animation
 };
 
 const hoverStyle = {
     background: 'linear-gradient(104.61deg, rgba(0, 0, 0, 0.6) 7.21%, #EFEFEF 26.13%, #8C18E7 56.01%)'
 };
 
-const DonateButton = ({handleClick}) => {
+const DonateButton = ({ handleClick }) => {
     const [isHovered, setIsHovered] = useState(false);
 
     return (
