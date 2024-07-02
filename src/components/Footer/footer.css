@@ -60,3 +60,13 @@
         height: 18px;
     }
 }
+
+@media (max-width: 475px) {
+    .footerImageContainer p{
+        font-size: 10px;
+        font-weight: 700;
+        line-height: 33px;
+        letter-spacing: 0.06em;
+        text-align: left;
+    }
+}

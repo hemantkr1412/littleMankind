@@ -27,7 +27,7 @@ const Carousal = () => {
       } else if (screenWidth >= 600) {
         setSlidesToShow(3);
         setAutoplay(true);
-      } else if (screenWidth >= 400) {
+      } else if (screenWidth >= 500) {
         setSlidesToShow(2);
         setAutoplay(true);
       } else {

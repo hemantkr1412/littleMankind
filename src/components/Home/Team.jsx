@@ -39,7 +39,7 @@ const Team = ({about}) =>{
                     // width:"100%",
                     marginTop:"3rem",
                     display:'flex',
-                    gap:"10rem",
+                    // gap:"10rem",
                     // justifyContent:"space-around"
                     
                 }}>

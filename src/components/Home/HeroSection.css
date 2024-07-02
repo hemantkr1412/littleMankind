@@ -115,7 +115,7 @@ text-align: left;
   height:132px;
 }
 .ourTeamContainerSub{
-
+  gap: 10rem;
 }
 
 .teamContainerSub{
@@ -173,6 +173,7 @@ text-align: left;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: gradientAnimation 3s ease infinite;
+  font-size: 24px;
 }
 
   
@@ -261,6 +262,12 @@ text-align: left;
     letter-spacing: 0.06em;
     text-align: center;
     
+  }
+  .ourTeamContainerSub{
+    gap: 5rem;
+  }
+  .gradient-text {
+    font-size: 15px;
   }
     
 }

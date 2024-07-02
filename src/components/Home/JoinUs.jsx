@@ -39,7 +39,7 @@ const JoinUs = ({handleScroll,joinus,contact})=>{
                     style={{
                         marginTop:"1rem",
                         fontFamily: 'Syne, sans-serif' ,
-                        fontSize: "24px",
+                        // fontSize: "24px",
                         fontWeight: "600",
                         lineHeight: "28.8px",
                         letterSpacing: "0.06em",

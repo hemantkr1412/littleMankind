@@ -24,7 +24,7 @@ const Footer = ()=>{
             }}>
                 <div  className="footerImageContainer">
                     <img className="imageContainer" src="./large_littlemankind2.svg" alt="Icon" />
-                    <p>Lets save mankind</p>
+                    <p>Lets save Mankind</p>
                 </div>
                 <div className="footerTextContainer">
                     <p style={{
