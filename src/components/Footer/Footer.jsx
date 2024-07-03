@@ -18,7 +18,7 @@ const Footer = ()=>{
             className="footerSubContainer"
             style={{
                 marginTop:"6rem",
-                width:"80%",
+                // width:"80%",
                 display:"flex",
                 justifyContent:"space-between"
             }}>
