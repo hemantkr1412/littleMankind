@@ -61,7 +61,7 @@ const Impact = () => {
                 width: "80%",
                 display: "flex",
                 padding: "2rem",
-                justifyContent: "space-between",
+                // justifyContent: "space-between",
             }}>
                 <div>
                     <p style={{
@@ -75,7 +75,7 @@ const Impact = () => {
                         ANIMAL CONSERVED
                     </p>
                     <h3 style={{
-                        fontSize: "52px",
+                        // fontSize: "52px",
                         fontWeight: "700",
                         lineHeight: "78px",
                         letterSpacing: "0.06em",
@@ -98,7 +98,7 @@ const Impact = () => {
                         TREE PLANTED
                     </p>
                     <h3 style={{
-                        fontSize: "52px",
+                        // fontSize: "52px",
                         fontWeight: "700",
                         lineHeight: "78px",
                         letterSpacing: "0.06em",
@@ -120,7 +120,7 @@ const Impact = () => {
                         WOMEN BENEFITED
                     </p>
                     <h3 style={{
-                        fontSize: "52px",
+                        // fontSize: "52px",/
                         fontWeight: "700",
                         lineHeight: "78px",
                         letterSpacing: "0.06em",
@@ -142,7 +142,7 @@ const Impact = () => {
                         CHILDREN BENEFITED
                     </p>
                     <h3 style={{
-                        fontSize: "52px",
+                        // fontSize: "52px",
                         fontWeight: "700",
                         lineHeight: "78px",
                         letterSpacing: "0.06em",
