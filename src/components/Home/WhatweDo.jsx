@@ -147,7 +147,7 @@ const WhatweDo = ({mission}) => {
                     }}/>
                
                     <div>
-                    <p>CHILDREN WELFARRE</p>
+                    <p>CHILDREN WELFARE</p>
                     <p style={{
                         fontSize: "14px",
                         fontWeight: "400",
@@ -216,7 +216,7 @@ const WhatweDo = ({mission}) => {
                     }}/>
                
                     <div>
-                    <p >FORSET</p>
+                    <p >FOREST</p>
                     <p style={{
                         fontSize: "14px",
                         fontWeight: "400",

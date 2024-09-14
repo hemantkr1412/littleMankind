@@ -1,6 +1,118 @@
 
+import { useState } from "react";
 import "./donate.css"
 const Donate = ()=>{
+
+    const [donorDetails,setDonorDetails] = useState({
+      name:"",
+      email:"",
+      phone:"",
+      ammount:"",
+      panCard:""
+    });
+
+    const handleChange = (e) =>{
+      setDonorDetails({
+        ...donorDetails,
+        [e.target.name]:e.target.value
+      })
+    }
+
+    const paymentHandler = async (event) => {
+        // console.log(donorDetails)
+        const amount = Number(donorDetails.ammount)*100
+        const currency = 'INR';
+        const receiptId = '1234567890';
+    
+        const response = await fetch('https://littlemankindserver.onrender.com/order', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            amount,
+            currency,
+            receipt: receiptId
+          })
+        })
+    
+          const order = await response.json();
+          console.log('order', order);
+    
+    
+          var option = {
+            key:"rzp_test_NFsEWZBOuaLNKY",
+            amount,
+            currency,
+            name:"Little ManKind",
+            description: "Test Transaction",
+            image:"https://littlemankind.xyz/mankind.svg",
+            order_id:order.id,
+            handler: async function(response) {
+              
+              const body = {...response, name:donorDetails.name,
+                email:donorDetails.email,
+                phoneNumber:donorDetails.phone,
+                panCard:donorDetails.panCard,
+                amount:donorDetails.ammount
+              }
+           
+    
+              const validateResponse = await fetch('https://littlemankindserver.onrender.com/validate', {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json'
+              },
+              body: JSON.stringify(body)
+    
+              })
+    
+              const jsonResponse = await validateResponse.json();
+    
+              console.log('jsonResponse', jsonResponse);
+              setDonorDetails({
+                name:"",
+                email:"",
+                phone:"",
+                ammount:"",
+                panCard:""
+              });
+              
+            },
+            prefill: {
+              name: donorDetails.name, 
+              email: donorDetails.email,
+              contact: donorDetails.phone, 
+            },
+            notes: {
+              address: "Razorpay Corporate Office",
+            },
+            theme: {
+              color: "#030016",
+            },
+          }
+    
+          var rzp1 = new Razorpay(option);
+          rzp1.on("payment.failed", function(response) {
+            alert(response.error.code);
+            alert(response.error.description);
+            alert(response.error.source);
+            alert(response.error.step);
+            alert(response.error.reason);
+            alert(response.error.metadata.order_id);
+            alert(response.error.metadata.payment_id);
+          })
+    
+          rzp1.open();
+          event.preventDefault();
+    }
+
+    
+
+
+
+
+
     return(
         <>
         <div 
@@ -76,17 +188,18 @@ const Donate = ()=>{
                     gap: "1rem" // Adding gap between the elements for better spacing
                 }}>
                 <label>Name*</label>
-                <input type="text" />
+                <input name="name" value={donorDetails.name} type="text" onChange={(e) =>handleChange(e)}/>
                 <label>Email*</label>
-                <input type="text" />
+                <input name="email" value={donorDetails.email}  type="email" onChange={(e) =>handleChange(e)}/>
                 <label>Phone*</label>
-                <input type="text" />
+                <input name="phone" value={donorDetails.phone} type="text" onChange={(e) =>handleChange(e)}/>
                 <label>Your Contribution amount *</label>
-                <input type="text" />
+                <input name="ammount" value={donorDetails.ammount} type="number" onChange={(e) =>handleChange(e)} />
                 <p>Need Tax Exemption - PAN is mandatory</p>
-                <label>Pan Card Number</label>
-                <input type="text" />
+                <label>PAN Card Number</label>
+                <input name="panCard" value={donorDetails.panCard} type="text" onChange={(e) =>handleChange(e)}/>
                 <button 
+                    onClick={paymentHandler}
                     style={{
                     alignSelf: "center",
                     padding: "0.5rem 1rem", // Optional: Adding padding for a better look
