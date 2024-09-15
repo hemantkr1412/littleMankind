@@ -30,7 +30,7 @@ const Footer = ()=>{
                     <p style={{
                         fontFamily: "Syne",
                        
-                    }}>Kumaris , Kargundha Main Road ,<br /> Kargundha Post , North Coorg ,571201</p>
+                    }}>8th Block, Prestige Kew Gardens,<br />  Yemlur, Bangalore 560037 ,</p>
                     <div
                      className="footerContainerSocialIcon"
                      style={{

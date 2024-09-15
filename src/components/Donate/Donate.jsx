@@ -1,6 +1,8 @@
 
 import { useState } from "react";
 import "./donate.css"
+import ClipLoader from "react-spinners/ClipLoader";
+
 const Donate = ()=>{
 
     const [donorDetails,setDonorDetails] = useState({
@@ -11,6 +13,17 @@ const Donate = ()=>{
       panCard:""
     });
 
+  let [loading, setLoading] = useState(false);
+  
+
+
+
+    
+
+
+
+
+
     const handleChange = (e) =>{
       setDonorDetails({
         ...donorDetails,
@@ -19,10 +32,17 @@ const Donate = ()=>{
     }
 
     const paymentHandler = async (event) => {
+      setLoading(true)
         // console.log(donorDetails)
         const amount = Number(donorDetails.ammount)*100
         const currency = 'INR';
         const receiptId = '1234567890';
+
+        if(amount === 0|| donorDetails.name === "" ||  donorDetails.phone === "" ){
+          alert("Please Fill the required data");
+          setLoading(false)
+          return ;
+        }
     
         const response = await fetch('https://littlemankindserver.onrender.com/order', {
           method: 'POST',
@@ -38,73 +58,81 @@ const Donate = ()=>{
     
           const order = await response.json();
           console.log('order', order);
-    
-    
-          var option = {
-            key:"rzp_test_NFsEWZBOuaLNKY",
-            amount,
-            currency,
-            name:"Little ManKind",
-            description: "Test Transaction",
-            image:"https://littlemankind.xyz/mankind.svg",
-            order_id:order.id,
-            handler: async function(response) {
-              
-              const body = {...response, name:donorDetails.name,
-                email:donorDetails.email,
-                phoneNumber:donorDetails.phone,
-                panCard:donorDetails.panCard,
-                amount:donorDetails.ammount
-              }
-           
-    
-              const validateResponse = await fetch('https://littlemankindserver.onrender.com/validate', {
-              method: 'POST',
-              headers: {
-                'Content-Type': 'application/json'
+
+          if(order.id){
+            var option = {
+              key:"rzp_live_ozVsHub3NjAF4M",
+              amount,
+              currency,
+              name:"Little ManKind",
+              description: "Test Transaction",
+              image:"https://littlemankind.xyz/mankind.svg",
+              order_id:order.id,
+              handler: async function(response) {
+                
+                const body = {...response, name:donorDetails.name,
+                  email:donorDetails.email,
+                  phoneNumber:donorDetails.phone,
+                  panCard:donorDetails.panCard,
+                  amount:donorDetails.ammount
+                }
+             
+      
+                const validateResponse = await fetch('https://littlemankindserver.onrender.com/validate', {
+                method: 'POST',
+                headers: {
+                  'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(body)
+      
+                })
+      
+                const jsonResponse = await validateResponse.json();
+      
+                console.log('jsonResponse', jsonResponse);
+                setDonorDetails({
+                  name:"",
+                  email:"",
+                  phone:"",
+                  ammount:"",
+                  panCard:""
+                });
+                setLoading(false)
+                
               },
-              body: JSON.stringify(body)
-    
-              })
-    
-              const jsonResponse = await validateResponse.json();
-    
-              console.log('jsonResponse', jsonResponse);
-              setDonorDetails({
-                name:"",
-                email:"",
-                phone:"",
-                ammount:"",
-                panCard:""
-              });
-              
-            },
-            prefill: {
-              name: donorDetails.name, 
-              email: donorDetails.email,
-              contact: donorDetails.phone, 
-            },
-            notes: {
-              address: "Razorpay Corporate Office",
-            },
-            theme: {
-              color: "#030016",
-            },
+              prefill: {
+                name: donorDetails.name, 
+                email: donorDetails.email,
+                contact: donorDetails.phone, 
+              },
+              notes: {
+                address: "Razorpay Corporate Office",
+              },
+              theme: {
+                color: "#030016",
+              },
+            }
+      
+            var rzp1 = new Razorpay(option);
+            rzp1.on("payment.failed", function(response) {
+              alert(response.error.code);
+              alert(response.error.description);
+              alert(response.error.source);
+              alert(response.error.step);
+              alert(response.error.reason);
+              alert(response.error.metadata.order_id);
+              alert(response.error.metadata.payment_id);
+            })
+      
+            rzp1.open();
+            event.preventDefault();
+          }else{
+            alert("Something went wrong! Try Again");
+            setLoading(false)
           }
     
-          var rzp1 = new Razorpay(option);
-          rzp1.on("payment.failed", function(response) {
-            alert(response.error.code);
-            alert(response.error.description);
-            alert(response.error.source);
-            alert(response.error.step);
-            alert(response.error.reason);
-            alert(response.error.metadata.order_id);
-            alert(response.error.metadata.payment_id);
-          })
     
-          rzp1.open();
-          event.preventDefault();
+         
     }
 
     
@@ -164,6 +192,7 @@ const Donate = ()=>{
             }}>
                 DONATE
             </h3>
+            
         </div>
         <div 
         className="donateSubContainer"
@@ -189,24 +218,29 @@ const Donate = ()=>{
                 }}>
                 <label>Name*</label>
                 <input name="name" value={donorDetails.name} type="text" onChange={(e) =>handleChange(e)}/>
-                <label>Email*</label>
+                <label>Email</label>
                 <input name="email" value={donorDetails.email}  type="email" onChange={(e) =>handleChange(e)}/>
                 <label>Phone*</label>
                 <input name="phone" value={donorDetails.phone} type="text" onChange={(e) =>handleChange(e)}/>
                 <label>Your Contribution amount *</label>
                 <input name="ammount" value={donorDetails.ammount} type="number" onChange={(e) =>handleChange(e)} />
-                <p>Need Tax Exemption - PAN is mandatory</p>
-                <label>PAN Card Number</label>
-                <input name="panCard" value={donorDetails.panCard} type="text" onChange={(e) =>handleChange(e)}/>
-                <button 
-                    onClick={paymentHandler}
-                    style={{
-                    alignSelf: "center",
-                    padding: "0.5rem 1rem", // Optional: Adding padding for a better look
-                    fontSize: "16px", // Optional: Setting font size
-                    cursor: "pointer" // Optional: Changing cursor to pointer on hover
-                    }}>
-                    Donate
+                <p>Tax exemption receipt will be issued once we receive the 80G certificate.</p>
+                {/* <label>PAN Card Number</label> */}
+                {/* <input name="panCard" value={donorDetails.panCard} type="text" onChange={(e) =>handleChange(e)}/> */}
+                <button
+                onClick={paymentHandler}
+                style={{
+                  alignSelf: "center",
+                  padding: "0.5rem 1rem",
+                  fontSize: "16px",
+                  cursor: "pointer",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}
+                disabled={loading} // Disable button during loading
+              >
+                    {loading ? <ClipLoader size={16} color={"#ffffff"} /> : "Donate"}
                 </button>
                 </div>
 
@@ -234,11 +268,11 @@ const Donate = ()=>{
                     <p className="accoutnDetails">
                     LITTLE MANKIND  <br />
                     Current Account  <br />
-                    Account # 34803899434 <br />
-                    State Bank Of India, Hosur Road Branch, <br />
-                    Bangalore - 560100 <br />
-                    IFSC code - SBIN0010514  <br />
-                    MICR Code - 560002108  <br />
+                    Account # 50200101064724 <br />
+                    HDFC Bank, Yemalur Branch, <br />
+                    Bangalore - 560037 <br />
+                    IFSC code - HDFC0009489  <br />
+                    {/* MICR Code - 560002108  <br /> */}
                     </p>
 
                     <p style={{marginTop:"2rem"}} className="accoutnDetails">
