@@ -2,8 +2,12 @@
 import { useState } from "react";
 import "./donate.css"
 import ClipLoader from "react-spinners/ClipLoader";
+import { useEffect } from "react";
 
 const Donate = ()=>{
+  useEffect(() => {
+    window.scrollTo(0, window.innerHeight / 1.1);
+  }, []);
 
     const [donorDetails,setDonorDetails] = useState({
       name:"",

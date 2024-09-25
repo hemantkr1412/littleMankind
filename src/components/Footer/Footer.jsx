@@ -1,5 +1,8 @@
 import "./footer.css";
+import PrivacyPolicy from './../PrivacyDocuments/PrivacyPolicy';
+import { useNavigate } from "react-router-dom";
 const Footer = ()=>{
+    const navigate = useNavigate();
     return(
         <div 
 
@@ -49,6 +52,41 @@ const Footer = ()=>{
            <div style={{
             marginTop:"2rem"
             }}>
+            <div style={{
+                display:"flex",
+                gap:"1rem"
+            }}>
+            <p
+            onClick={() =>navigate("/privacy-policy")}
+            style={{
+                fontSize: "14px",
+                fontWeight: "600",
+                lineHeight: "21px",
+                textAlign: "center",
+                color: "rgba(255, 255, 255, 0.8)",
+                cursor:"pointer"
+            }}>Privacy Policy</p>
+             <p 
+              onClick={() =>navigate("/terms-and-condition")}
+             style={{
+                fontSize: "14px",
+                fontWeight: "600",
+                lineHeight: "21px",
+                textAlign: "center",
+                color: "rgba(255, 255, 255, 0.8)",
+                cursor:"pointer"
+            }}>Terms and Condition</p>
+             <p 
+              onClick={() =>navigate("/refund-policy")}
+             style={{
+                fontSize: "14px",
+                fontWeight: "600",
+                lineHeight: "21px",
+                textAlign: "center",
+                color: "rgba(255, 255, 255, 0.8)",
+                cursor:"pointer"
+            }}>Refund Policy</p>
+            </div>
             <p style={{
                 fontSize: "14px",
                 fontWeight: "400",

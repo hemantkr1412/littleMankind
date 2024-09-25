@@ -1,4 +1,4 @@
-// import Logo from '../../assets/IUCILA____logo_horizo__color.png';
+
 import "./navbar.css";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
@@ -53,9 +53,9 @@ const Navbar = ({handleScroll,heroSection,projects,about,joinus,contact,partners
         };
 
     
-    console.log(mission)
-    console.log(about)
-    console.log(partners)
+    // console.log(mission)
+    // console.log(about)
+    // console.log(partners)
 
 
     return(
@@ -70,7 +70,7 @@ const Navbar = ({handleScroll,heroSection,projects,about,joinus,contact,partners
             justifyContent:"space-between",
             alignItems:"center",
         }}>
-            <img src="/mankind.svg" alt="logo" onClick={()=>{
+            <img src="/svg.svg" alt="logo" onClick={()=>{
                 navigate('/')
             }} style={{width:"150px", height:"80px",marginLeft:"20px",cursor:"pointer"}}/>
 

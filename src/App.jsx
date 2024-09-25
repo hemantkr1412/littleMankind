@@ -9,6 +9,9 @@ import AnimalWelfare from "./components/Projects/AnimalWelfareProject";
 import ChildrenWelfare from "./components/Projects/ChildrenWlfare";
 import WomenWelfare from "./components/Projects/WomenWelafre";
 import Forest from "./components/Projects/Forest";
+import PrivacyPolicy from "./components/PrivacyDocuments/PrivacyPolicy";
+import TermsAndConditions from "./components/PrivacyDocuments/TermsAndCondition";
+import RefundPolicy from "./components/PrivacyDocuments/RefundPolicy";
 
 function App() {
   const heroSection = useRef(null)
@@ -76,6 +79,18 @@ function App() {
         <Route path="/forest"
       element={
         <Forest />
+      }/>
+      <Route path="/privacy-policy"
+      element={
+        <PrivacyPolicy />
+      }/>
+      <Route path="/terms-and-condition"
+      element={
+        <TermsAndConditions />
+      }/>
+       <Route path="/refund-policy"
+      element={
+        <RefundPolicy />
       }/>
            
      </Routes>
