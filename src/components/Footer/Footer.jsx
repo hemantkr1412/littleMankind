@@ -26,7 +26,7 @@ const Footer = ()=>{
                 justifyContent:"space-between"
             }}>
                 <div  className="footerImageContainer">
-                    <img className="imageContainer" src="./large_littlemankind2.svg" alt="Icon" />
+                    <img className="imageContainer" src="./white.svg" alt="Icon" />
                     <p>Lets save Mankind</p>
                 </div>
                 <div className="footerTextContainer">

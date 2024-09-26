@@ -130,7 +130,7 @@ text-align: left;
 }
 
 .contactUsEmailBox{
-  width:543px;
+  min-width: 543px;
   height:71px;
 }
 
@@ -230,11 +230,12 @@ text-align: left;
       flex-direction: column;
     }
     .contactUsEmailBox{
-      width:300px;
+      min-width: 0px;
+      width: auto;
       height:71px;
     }
     .contactUsEmailBox p{
-      font-size: 18px;
+      font-size: 15px;
       font-weight: 600;
       line-height: 43.2px;
       letter-spacing: 0.06em;

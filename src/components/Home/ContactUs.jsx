@@ -94,7 +94,7 @@ const ContactUs = ({contact})=>{
                 }}>
                     <p style={{
                         fontFamily: "Syne",
-                    }}>hello@littlemankind.xyz</p>
+                    }}>littlemankind2024@gmail.com</p>
                 </div>
         </div>
       </div>
