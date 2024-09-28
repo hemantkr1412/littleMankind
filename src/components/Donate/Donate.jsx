@@ -228,9 +228,9 @@ const Donate = ()=>{
                 <input name="phone" value={donorDetails.phone} type="text" onChange={(e) =>handleChange(e)}/>
                 <label>Your Contribution amount *</label>
                 <input name="ammount" value={donorDetails.ammount} type="number" onChange={(e) =>handleChange(e)} />
-                <p>Tax exemption receipt will be issued once we receive the 80G certificate.</p>
-                {/* <label>PAN Card Number</label> */}
-                {/* <input name="panCard" value={donorDetails.panCard} type="text" onChange={(e) =>handleChange(e)}/> */}
+                {/* <p>Tax exemption receipt will be issued once we receive the 80G certificate.</p> */}
+                <label>PAN Card Number</label>
+                <input name="panCard" value={donorDetails.panCard} type="text" onChange={(e) =>handleChange(e)}/>
                 <button
                 onClick={paymentHandler}
                 style={{
@@ -270,7 +270,8 @@ const Donate = ()=>{
                         You can also transfer your contribution to LITTLE MANKINDS' bank account.
                     </p>
                     <p className="accoutnDetails">
-                    LITTLE MANKIND  <br />
+                    Little mankind trust
+                    <br />
                     Current Account  <br />
                     Account # 50200101064724 <br />
                     HDFC Bank, Yemalur Branch, <br />
@@ -280,7 +281,7 @@ const Donate = ()=>{
                     </p>
 
                     <p style={{marginTop:"2rem"}} className="accoutnDetails">
-                    Write to us at hello@littlemankind.xyz <br />
+                    Write to us at littlemankind2024@gmail.com <br />
                     after transferring your contribution
                     </p>
             </div>
