@@ -269,14 +269,15 @@ const Donate = ()=>{
                     }}>
                         You can also transfer your contribution to LITTLE MANKINDS' bank account.
                     </p>
+                   
                     <p className="accoutnDetails">
-                    Little mankind trust
-                    <br />
                     Current Account  <br />
-                    Account # 50200101064724 <br />
+                    Name : Little mankind trust
+                    <br />
+                    Account : 50200101064724 <br />
+                    IFSC code : HDFC0009489  <br />
                     HDFC Bank, Yemalur Branch, <br />
                     Bangalore - 560037 <br />
-                    IFSC code - HDFC0009489  <br />
                     {/* MICR Code - 560002108  <br /> */}
                     </p>
 

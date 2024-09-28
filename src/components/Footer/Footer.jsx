@@ -43,8 +43,8 @@ const Footer = ()=>{
                         marginTop:"2rem"
                     }}>
                         <img src="./instIcon.svg" alt="Instagram" />
-                        <img src="./facebookIcon.svg" alt="Instagram" />
-                        <img src="./linkdIcon.svg" alt="Instagram" />
+                        {/* <img src="./facebookIcon.svg" alt="Instagram" /> */}
+                        {/* <img src="./linkdIcon.svg" alt="Instagram" /> */}
                     </div>
                 </div>
 
